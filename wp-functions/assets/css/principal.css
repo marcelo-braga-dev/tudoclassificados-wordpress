@@ -1,0 +1,122 @@
+:root{
+    --principal: #004da9;
+    --secundaria: #FF9000;
+}
+
+h1{
+    font-size:24px;
+}
+h3{
+    color:var(--principal);
+}
+h3 a{
+    color:var(--principal) !important;
+    font-size: 18px !important;
+}
+h4 a{
+    color:var(--principal) !important;
+    font-size: 16px !important;
+}
+/* a {
+    color:var(--principal) !important;
+} */
+body{
+    font-family: roboto;
+}
+
+.card-deck{
+    display: none; 
+    height:320px; 
+    background-color: transparent;
+}
+
+.badge{
+    font-size:8px; 
+    vertical-align:middle;
+}
+
+.site-footer{
+    display: block;
+}
+
+footer{
+    padding: 0px !important;
+}
+
+.label-primary{
+    background-color:var(--principal) !important;
+}
+.pagination .active span{
+    background-color: var(--principal) !important;
+    border:0px;
+}
+.acadp-listing-form-submit-btn{
+    background-color: var(--principal) !important;
+    border-radius:5px !important;
+}
+.thumbnail a{
+    background-color:white !important;
+}
+.acadp-responsive-container{
+    background-color:white !important;
+}
+.nav-pills .nav-item .nav-link.active{
+    color: white !important;
+    background-color:  var(--principal);
+    box-shadow: none;
+}
+
+.nav-tabs {
+    background-color: var(--principal);
+}
+
+ul {
+    margin: 0px;
+    margin-top: 10px;
+}
+
+select, textarea{
+    border: 1px solid gainsboro !important;
+    border-radius: 5px !important;
+    padding-left: 20px !important;
+}
+
+/* Esconder badge Google */
+.grecaptcha-badge { visibility: hidden; }
+
+.list-group-item.active {
+    background-color: var(--principal);
+    border-color: var(--principal);
+}
+
+.btn-primary {
+    background-color: var(--principal);
+}
+
+li a {
+    text-decoration: none !important;
+}
+
+.uwp-banner-image {
+    max-height: 150px !important
+}
+
+label {
+    color: rgb(133, 133, 133) !important;
+    line-height: 1 !important;
+    font-size: 0.9rem !important;
+}
+
+li {
+    margin-left: 0px !important;
+}
+
+.titulo-anuncio {
+    text-decoration: none; 
+    color: black; 
+    font-size:20px
+}
+
+.emblema-status {
+    font-size: 11px;
+}

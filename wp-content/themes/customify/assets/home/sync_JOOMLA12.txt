@@ -1,0 +1,1 @@
+/home/sync/public_html/v2/configuration.php

@@ -1,0 +1,1 @@
+/home/tudocl45/public_html/v2/wp-config.php

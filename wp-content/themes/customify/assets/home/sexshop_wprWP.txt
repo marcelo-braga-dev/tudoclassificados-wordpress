@@ -1,0 +1,1 @@
+/home/sexshop/public_html/wordpress/wp-config.php

@@ -1,0 +1,1 @@
+/home/sw-cp-server/public_html/wp/test/wp-config.php

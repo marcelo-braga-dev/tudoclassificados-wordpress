@@ -1,0 +1,1 @@
+/home/buenos/public_html/WP/wp-config.php

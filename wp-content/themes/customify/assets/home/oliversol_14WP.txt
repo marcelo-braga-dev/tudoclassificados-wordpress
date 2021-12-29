@@ -1,0 +1,1 @@
+/home/oliversol/public_html/new/wp-config.php

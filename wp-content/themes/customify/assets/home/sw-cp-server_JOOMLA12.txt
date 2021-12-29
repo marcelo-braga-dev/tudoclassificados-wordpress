@@ -1,0 +1,1 @@
+/home/sw-cp-server/public_html/v2/configuration.php

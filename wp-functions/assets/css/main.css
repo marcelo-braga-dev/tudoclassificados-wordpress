@@ -1,0 +1,31 @@
+h1{
+    font-size:24px;
+}
+h3{
+    color:#004da9;
+}
+h3 a{
+    color:#004da9 !important;
+    font-size: 18px !important;
+}
+h4 a{
+    color:#004da9 !important;
+    font-size: 16px !important;
+}
+.label-primary{
+    background-color:#004da9 !important;
+}
+.pagination .active span{
+    background-color: #004da9 !important;
+    border:0px;
+}
+.acadp-listing-form-submit-btn{
+    background-color: #004da9 !important;
+    border-radius:5px !important;
+}
+.thumbnail a{
+    background-color:white !important;
+}
+.acadp-responsive-container{
+    background-color:white !important;
+}

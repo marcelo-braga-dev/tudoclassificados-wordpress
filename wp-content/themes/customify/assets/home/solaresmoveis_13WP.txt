@@ -1,0 +1,1 @@
+/home/solaresmoveis/public_html/press/wp-config.php

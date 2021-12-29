@@ -1,0 +1,1 @@
+/home/_imunify/public_html/site/wp-config.php

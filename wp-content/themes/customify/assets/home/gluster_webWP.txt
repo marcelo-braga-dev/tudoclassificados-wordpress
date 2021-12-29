@@ -1,0 +1,1 @@
+/home/gluster/public_html/web/wp-config.php

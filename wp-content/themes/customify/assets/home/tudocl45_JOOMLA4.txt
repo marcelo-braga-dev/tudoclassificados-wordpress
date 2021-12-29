@@ -1,0 +1,1 @@
+/home/tudocl45/public_html/beta/configuration.php

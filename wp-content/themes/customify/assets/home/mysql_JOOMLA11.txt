@@ -1,0 +1,1 @@
+/home/mysql/public_html/v1/configuration.php

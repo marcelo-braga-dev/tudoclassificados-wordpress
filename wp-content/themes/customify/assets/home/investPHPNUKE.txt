@@ -1,0 +1,1 @@
+/home/invest/public_htm/html/config.php

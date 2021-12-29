@@ -1,0 +1,1 @@
+/home/wp-toolkit/.my.cnf

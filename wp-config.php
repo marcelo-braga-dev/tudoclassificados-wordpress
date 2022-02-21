@@ -25,6 +25,8 @@
  */
 // ** Configurações do MySQL - Você pode pegar estas informações com o serviço de hospedagem ** //
 /** O nome do banco de dados do WordPress */
+define('WP_CACHE', true);
+define( 'WPCACHEHOME', '/home/tudocl45/public_html/wp-content/plugins/wp-super-cache/' );
 define( 'DB_NAME', 'tudocl45_tudoclassi1' );
 /** Usuário do banco de dados MySQL */
 define( 'DB_USER', 'tudocl45_tudoclassceo' );

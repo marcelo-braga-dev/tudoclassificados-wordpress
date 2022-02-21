@@ -759,9 +759,10 @@ class UsersWP_GeoDirectory_Plugin {
 				$post_type_slug = $gd_post_types[ $post_type_id ]['has_archive'];
 
 				if ( uwp_is_gdv2() ) {
+					$reviews = apply_filters('uwp_profile_gd_show_all_reviews', false, $user, $post_type_id);
 					if ( $type == 'favorites' && geodir_cpt_has_favourite_disabled( $post_type_id ) ) {
 						continue;
-					} elseif ( $type == 'reviews' && geodir_cpt_has_rating_disabled( $post_type_id ) ) {
+					} elseif ( $type == 'reviews' && $reviews && geodir_cpt_has_rating_disabled( $post_type_id ) ) {
 						continue;
 					}
 				}
@@ -1778,18 +1779,17 @@ class UsersWP_GeoDirectory_Plugin {
 	 * @return      bool
 	 */
 	public function gd_is_listings_tab() {
-		global $wp_query;
-		if ( is_page() && class_exists( 'UsersWP' ) ) {
-			$profile_page = uwp_get_page_id( 'profile_page', false );
-			if ( $profile_page ) {
-				if ( isset( $wp_query->query_vars['uwp_profile'] )
-				     && isset( $wp_query->query_vars['uwp_tab'] )
-				     && ( $wp_query->query_vars['uwp_tab'] == 'listings' || $wp_query->query_vars['uwp_tab'] == 'favorites' )
-				) {
+		global $wp_query, $uwp_profile_tabs_array;
 
-					return true;
+		if ( is_page() && class_exists( 'UsersWP' ) && isset( $wp_query->query_vars['uwp_profile'] ) && ( $profile_page = uwp_get_page_id( 'profile_page', false ) ) ) {
+			$active_tab = ! empty( $wp_query->query_vars['uwp_tab'] ) ? $wp_query->query_vars['uwp_tab'] : '';
 
-				}
+			if ( empty( $active_tab ) && ! empty( $uwp_profile_tabs_array ) && ! empty( $uwp_profile_tabs_array[0]->tab_key ) ) {
+				$active_tab = $uwp_profile_tabs_array[0]->tab_key;
+			}
+
+			if ( $active_tab == 'listings' || $active_tab == 'favorites' ) {
+				return true;
 			}
 		}
 

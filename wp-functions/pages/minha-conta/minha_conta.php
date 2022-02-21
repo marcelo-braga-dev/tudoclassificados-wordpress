@@ -66,6 +66,19 @@ if (is_user_logged_in()) :
                         </div>
                     </a>
                     <div class="dropdown-divider pb-2"></div>
+                    
+                    <!-- Pagamentos -->
+                    <a class="text-main mb-2" id="anuncios-classificados-tab" data-toggle="list" href="#anuncios-classificados" role="tab">
+                        <div class="row nav-item">
+                            <div class="col-2 text-right">
+                                <i class="fab fa-dribbble"></i>
+                            </div>
+                            <div class="col-10">
+                                Anúncios Classificados
+                            </div>
+                        </div>
+                    </a>
+                    <div class="dropdown-divider pb-2"></div>
 
                     <!-- Filiado -->
                     <a class="text-main pl-1 mb-1" id="i ntegracoes-tab" data-toggle="list" role="tab">
@@ -212,6 +225,11 @@ if (is_user_logged_in()) :
                     <!-- Resumo -->
                     <div class="tab-pane fade <?php if (empty($abaMenu)) echo 'active show' ?>" id="resumo" role="tabpanel">
                         <?php include 'partials/resumo.php' ?>
+                    </div>
+                    
+                    <!-- Anuncios Classificados -->
+                    <div class="tab-pane fade" id="anuncios-classificados" role="tabpanel">
+                        <?php include 'partials/anuncios-classificados.php' ?>
                     </div>
 
                     <!-- Anuncios -->

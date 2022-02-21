@@ -291,11 +291,6 @@ function get_uwp_users_list($roles = array()) {
 		$keyword = stripslashes(strip_tags($_GET['uwps']));
 	}
 
-	$sort_by = $meta_key = false;
-	if (isset($_GET['uwp_sort_by']) && $_GET['uwp_sort_by'] != '') {
-		$sort_by = strip_tags(esc_sql($_GET['uwp_sort_by']));
-	}
-
 	$paged = ( get_query_var( 'paged' ) ) ? absint( get_query_var( 'paged' ) ) : 1;
 
 	$number = uwp_get_option('users_no_of_items', 10);
@@ -308,55 +303,30 @@ function get_uwp_users_list($roles = array()) {
 	$exclude_users = apply_filters('uwp_excluded_users_from_list', $exclude_users, $where, $keyword);
 	$exclude_users = !empty($exclude_users) ? array_unique($exclude_users): array();
 
-	$exclude_query = ' ';
-	if(!empty($exclude_users)) {
-		$exclude_users_list = implode(',', $exclude_users);
-		$exclude_query = 'AND '. $wpdb->users.'.ID NOT IN ('.$exclude_users_list.')';
-	}
+	$exclude_query = ' ';$order_by = 'uwp_meta_value'; $order = 'ASC';
 
-	if(empty($sort_by)){
-		$sort_by = uwp_get_option('users_default_order_by', 'alpha_asc');
-	}
+	if (isset($_GET['uwp_sort_by']) && $_GET['uwp_sort_by'] != '') {
+		$sort_by = strip_tags(esc_sql($_GET['uwp_sort_by']));
+	} else {
+		$sort_by = '';
+    }
 
 	if ($sort_by) {
-		switch ($sort_by) {
+		switch ( $sort_by ) {
 			case "newer":
 				$order_by = 'registered';
-				$order = 'DESC';
+				$order    = 'DESC';
 				break;
 			case "older":
 				$order_by = 'registered';
-				$order = 'ASC';
-				break;
-			case "alpha_asc":
-				$order_by = 'display_name';
-				$order = 'ASC';
-				break;
-			case "alpha_desc":
-				$order_by = 'display_name';
-				$order = 'DESC';
-				break;
-            case "lname_asc":
-                $meta_key = 'last_name';
-				$order_by = 'meta_value';
-				$order = 'ASC';
-				break;
-			case "fname_asc":
-				$meta_key = 'first_name';
-				$order_by = 'meta_value';
-				$order = 'ASC';
-				break;
-            case "lname_desc":
-                $meta_key = 'last_name';
-				$order_by = 'meta_value';
-				$order = 'DESC';
-				break;
-			case "fname_desc":
-				$meta_key = 'first_name';
-				$order_by = 'meta_value';
-				$order = 'DESC';
+				$order    = 'ASC';
 				break;
 		}
+	}
+
+	if(!empty($exclude_users)) {
+		$exclude_users_list = implode(',', $exclude_users);
+		$exclude_query = 'AND '. $wpdb->users.'.ID NOT IN ('.$exclude_users_list.')';
 	}
 
 	$users = array();
@@ -1408,7 +1378,7 @@ function uwp_all_email_tags( $inline = true, $extra_tags = array() ){
 	$tags = array( '[#site_name#]', '[#site_name_url#]', '[#to_name#]', '[#from_name#]', '[#from_email#]', '[#user_name#]', '[#username#]', '[#user_email#]', '[#login_details#]', '[#date_time#]', '[#current_date#]', '[#login_url#]', '[#user_login#]', '[#profile_link#]' );
 
 	if(is_array($extra_tags) && count($extra_tags) > 0){
-		$tags = array_merge($tags, $extra_tags);
+		$tags = array_merge($extra_tags, $tags);
 	}
 
 	$tags = apply_filters( 'uwp_all_email_tags', $tags );
@@ -1783,18 +1753,77 @@ function uwp_get_user_roles($exclude = array()) {
 }
 
 function uwp_get_sort_by_order_list(){
-	$order_arr = array(
-		'alpha_asc' => __( 'Display name (A-Z)', 'userswp' ),
-		'alpha_desc' => __( 'Display name (Z-A)', 'userswp' ),
-		'newer' => __( 'Newer', 'userswp' ),
-		'older' => __( 'Older', 'userswp' ),
-		'fname_asc' => __("First name (A-Z)", "userswp"),
-		'fname_desc' => __("First name (Z-A)", "userswp"),
-		'lname_asc' => __("Last name (A-Z)", "userswp"),
-		'lname_desc' => __("Last name (Z-A)", "userswp"),
-	);
 
-	$order_arr = apply_filters('uwp_available_users_layout', $order_arr);
+	$cache = wp_cache_get("uwp_get_sort_options");
+	if($cache !== false){
+		return $cache;
+	}
 
-	return $order_arr;
+	global $wpdb;
+	$table_name = uwp_get_table_prefix() . 'uwp_user_sorting';
+
+	$sort_options_raw = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM " . $table_name . " WHERE is_active = %d AND field_type != 'address' AND tab_parent = '0' ORDER BY sort_order ASC", array(
+		1
+	) ) );
+
+	$sort_options = array();
+
+	if ( ! empty( $sort_options_raw ) && count( $sort_options_raw ) > 1 ) {
+		foreach ( $sort_options_raw as $sort ) {
+			$sort = stripslashes_deep( $sort );
+
+			$sort->site_title = __( $sort->site_title, 'userswp' );
+
+			if ( $sort->htmlvar_name == 'comment_count' ) {
+				$sort->htmlvar_name = 'rating_count';
+			}
+
+			$key = $sort->htmlvar_name;
+			if ( !in_array($key, array('newer', 'older')) ) {
+				if($sort->sort == 'asc'){$key = esc_attr($sort->htmlvar_name."_asc");}
+                elseif($sort->sort == 'desc'){$key = esc_attr($sort->htmlvar_name."_desc");}
+			}
+
+			$sort_options[$key] = $sort->site_title;
+		}
+	}
+
+	/**
+	 * Filter post sort options.
+	 *
+	 * @param array $sort_options Unfiltered sort field array.
+	 */
+	$sort_options = apply_filters( 'uwp_available_users_layout', $sort_options );
+
+	wp_cache_set("uwp_get_sort_options", $sort_options );
+
+	return $sort_options;
+}
+
+function uwp_get_default_sort(){
+
+	$cache = wp_cache_get("uwp_get_default_sort");
+
+	if($cache !== false){
+		return $cache;
+	}
+
+	$default_sort = 'newer_asc';
+
+    global $wpdb;
+	$table_name = uwp_get_table_prefix() . 'uwp_user_sorting';
+
+	$field = $wpdb->get_row("SELECT htmlvar_name, sort, field_type FROM " . $table_name . " WHERE is_active = 1 AND is_default = 1 ORDER BY sort_order ASC" );
+	if ( ! empty( $field ) ) {
+		if ( $field->field_type == 'random' ) {
+			$default_sort = 'random';
+		} else {
+			$default_sort = $field->htmlvar_name . '_' . $field->sort;
+		}
+	}
+
+	wp_cache_set("uwp_get_default_sort", $default_sort );
+
+	return $default_sort;
+
 }

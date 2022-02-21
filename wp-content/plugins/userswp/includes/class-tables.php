@@ -71,6 +71,7 @@ class UsersWP_Tables {
 							  validation_pattern varchar( 255 ) NOT NULL,
 							  validation_msg text NULL DEFAULT NULL,
 							  form_id int(11) NOT NULL DEFAULT 1,
+							  user_sort enum( '0', '1' ) NOT NULL DEFAULT '0',
 							  PRIMARY KEY  (id)
 							  ) $collate";
 
@@ -115,8 +116,8 @@ class UsersWP_Tables {
 		$user_meta = "CREATE TABLE " . $usermeta_table_name . " (
 						user_id int(20) NOT NULL,
 						user_ip varchar(20) NULL DEFAULT NULL,
-						user_privacy varchar(255) NULL DEFAULT NULL,
-						tabs_privacy varchar(255) NULL DEFAULT NULL,
+						user_privacy text NULL DEFAULT NULL,
+						tabs_privacy text NULL DEFAULT NULL,
 						username varchar(255) NULL DEFAULT NULL,
 						email varchar(255) NULL DEFAULT NULL,
 						first_name varchar(255) NULL DEFAULT NULL,
@@ -154,6 +155,28 @@ class UsersWP_Tables {
 							  ) $collate; ";
 
 		$tabs_tbl_query = apply_filters('uwp_profile_tabs_table_create_query', $tabs_tbl_query);
+
+		dbDelta($tabs_tbl_query);
+
+		// user sorting options table
+		$user_sorting_table_name = uwp_get_table_prefix() . 'uwp_user_sorting';
+		$tabs_tbl_query = " CREATE TABLE " . $user_sorting_table_name . " (
+							  id int(11) NOT NULL AUTO_INCREMENT,
+							  data_type varchar(255) NOT NULL,
+							  field_type varchar(255) NOT NULL,
+							  site_title varchar(255) NOT NULL,
+							  htmlvar_name varchar(255) NOT NULL,
+							  field_icon varchar(255) NULL DEFAULT NULL,
+						      sort_order int(11) NOT NULL DEFAULT '0',
+							  tab_parent varchar(100) NOT NULL DEFAULT '0',
+							  tab_level int(11) NOT NULL DEFAULT '0',
+							  is_active int(11) NOT NULL DEFAULT '0',
+							  is_default int(11) NOT NULL DEFAULT '0',
+							  sort varchar(5) DEFAULT 'asc',
+							  PRIMARY KEY  (id)
+							  ) $collate; ";
+
+		$tabs_tbl_query = apply_filters('uwp_user_sorting_table_create_query', $tabs_tbl_query);
 
 		dbDelta($tabs_tbl_query);
 

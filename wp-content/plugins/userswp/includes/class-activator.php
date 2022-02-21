@@ -20,6 +20,9 @@ class UsersWP_Activator {
         '1.2.2.5' => array(
 	        'uwp_upgrade_1225',
         ),
+        '1.2.3' => array(
+	        'uwp_upgrade_1230',
+        ),
     );
 
 
@@ -200,6 +203,9 @@ class UsersWP_Activator {
             'wp_new_user_notification_email' => 1,
             'wp_new_user_notification_email_subject' => UsersWP_Defaults::wp_new_user_notification_email_subject(),
             'wp_new_user_notification_email_content' => UsersWP_Defaults::wp_new_user_notification_email_content(),
+            'account_new_email_activation_email' => 1,
+            'account_new_email_activation_email_subject' => UsersWP_Defaults::account_new_email_activation_email_subject(),
+            'account_new_email_activation_email_content' => UsersWP_Defaults::account_new_email_activation_email_content(),
             'wp_new_user_notification_email_admin' => 1,
             'wp_new_user_notification_email_subject_admin' => UsersWP_Defaults::wp_new_user_notification_email_subject_admin(),
             'wp_new_user_notification_email_content_admin' => UsersWP_Defaults::wp_new_user_notification_email_content_admin(),
@@ -834,7 +840,7 @@ class UsersWP_Activator {
 
 			        if ( ! empty( $register_form['id'] )) {
 
-				        $reg_action = $register_form['reg_action'];
+				        $reg_action = isset($register_form['reg_action']) ? $register_form['reg_action'] : '';
 
 				        if(isset($reg_action) && $reg_action == 'force_redirect'){
 					        $settings['multiple_registration_forms'][$key]['reg_action'] = 'auto_approve_login';

@@ -1,0 +1,10 @@
+2022-01-28T23:51:07+00:00 CRITICAL Uncaught TypeError: Argument 1 passed to autenticar() must be of the type string, null given, called in /home/tudocl45/public_html/wp-functions/pages/minha-conta/partials/marketplace/autorizacao.php on line 4 and defined in /home/tudocl45/public_html/wp-functions/pages/minha-conta/partials/marketplace/autorizacao.php:7
+Stack trace:
+#0 /home/tudocl45/public_html/wp-functions/pages/minha-conta/partials/marketplace/autorizacao.php(4): autenticar(NULL)
+#1 /home/tudocl45/public_html/wp-content/plugins/insert-php-code-snippet/shortcode-handler.php(97) : eval()'d code(2): include('/home/tudocl45/...')
+#2 /home/tudocl45/public_html/wp-content/plugins/insert-php-code-snippet/shortcode-handler.php(97): eval()
+#3 /home/tudocl45/public_html/wp-includes/shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 /home/tudocl45/public_html/wp-includes/shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#6 /, em /home/tudocl45/public_html/wp-functions/pages/minha-conta/partials/marketplace/autorizacao.php, na linha 7
+

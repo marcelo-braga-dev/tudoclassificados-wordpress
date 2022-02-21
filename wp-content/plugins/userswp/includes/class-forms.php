@@ -103,6 +103,7 @@ class UsersWP_Forms {
 		}
 
 		if ( $processed ) {
+
 			if ( is_wp_error( $errors ) ) {
 				echo aui()->alert( array(
 					'type'    => 'error',
@@ -194,7 +195,8 @@ class UsersWP_Forms {
 	 * @since       1.0.0
 	 */
 	public function process_image_crop( $data = array(), $type = 'avatar', $unlink_prev_img = false ) {
-
+		global $wpdb;
+		
 		if ( ! is_user_logged_in() ) {
 			return false;
 		}
@@ -207,7 +209,7 @@ class UsersWP_Forms {
 		if ( is_admin() && defined( 'IS_PROFILE_PAGE' ) && IS_PROFILE_PAGE ) {
 			$user_id = get_current_user_id();
 			// If is another user's profile page
-		} elseif ( is_admin() && ! empty( $_GET['user_id'] ) && is_numeric( $_GET['user_id'] ) ) {
+		} elseif (  is_admin() && current_user_can( 'manage_options' ) && ! empty( $_GET['user_id'] ) && is_numeric( $_GET['user_id'] ) ) {
 			$user_id = absint($_GET['user_id']);
 			// Otherwise something is wrong.
 		} else {
@@ -253,6 +255,17 @@ class UsersWP_Forms {
 			//Scale the image based on cropped width setting
 			$scale = $full_width / $w;
 			//$scale = 1; // no scaling
+
+			// check we are not editing another user file
+			$db_value = trailingslashit( $uploads['subdir'] ) . $thumb_image_name;
+			$meta_table = get_usermeta_table_prefix() . 'uwp_usermeta';
+			$file_exists = $wpdb->get_var($wpdb->prepare("SELECT user_id FROM {$meta_table} WHERE ( `avatar_thumb` = %s OR `banner_thumb` = %s ) ", $db_value, $db_value));
+
+			// if file already exists then we should not be cropping it.
+			if( $file_exists ){
+				wp_die(  __( 'Something went wrong. Please contact site admin.', 'userswp' ), 403 );
+			}
+
 			$cropped = uwp_resizeThumbnailImage( $thumb_image_location, $image_url, $x, $y, $w, $h, $scale );
 			$cropped = str_replace( $upload_path, $upload_url, $cropped );
 
@@ -1046,6 +1059,8 @@ class UsersWP_Forms {
 				}
 			}
 			$redirect_to = get_permalink( $redirect_page_id );
+		} elseif ( isset( $redirect_page_id ) && (int) $redirect_page_id == - 1 && wp_get_referer() ) {
+			$redirect_to = esc_url( wp_get_referer() );
 		} elseif ( isset( $redirect_page_id ) && (int) $redirect_page_id == - 2 && $custom_url ) {
 			$redirect_to = $custom_url;
 		} else {
@@ -1493,6 +1508,8 @@ class UsersWP_Forms {
 				}
 			}
 			$redirect_to = get_permalink( $redirect_page_id );
+		} elseif ( isset( $redirect_page_id ) && (int) $redirect_page_id == - 1 && wp_get_referer() ) {
+			$redirect_to = esc_url( wp_get_referer() );
 		} elseif ( isset( $redirect_page_id ) && (int) $redirect_page_id == - 2 && !empty($custom_url) ) {
 			$redirect_to = $custom_url;
 		} else {
@@ -1679,7 +1696,7 @@ class UsersWP_Forms {
 	 * @package     userswp
 	 *
 	 */
-	public function process_change() {
+        public function process_change() {
 
 		$data = $_POST;
 
@@ -1914,10 +1931,6 @@ class UsersWP_Forms {
 			'ID' => get_current_user_id()
 		);
 
-		if ( isset( $result['email'] ) ) {
-			$args['user_email'] = $result['email'];
-		}
-
 		if ( isset( $result['first_name'] ) && isset( $result['last_name'] ) ) {
 			$args['display_name'] = $result['first_name'] . ' ' . $result['last_name'];
 		}
@@ -1981,20 +1994,59 @@ class UsersWP_Forms {
 
 		$form_fields = apply_filters( 'uwp_send_mail_form_fields', "", 'account', $user_id );
 
-		$email_vars = array(
-			'user_id'     => $user_id,
-			'form_fields' => $form_fields,
-		);
+		if ( isset( $result['email'] ) && $user_data->user_email !== trim($result['email']) ) {
 
-		UsersWP_Mails::send( $user_data->user_email, 'account_update', $email_vars );
+				$hash            = md5( $result['email'] . time() . wp_rand() );
+				$new_admin_email = array(
+					'hash'     => $hash,
+					'newemail' => $result['email'],
+				);
 
-		$message       = apply_filters( 'uwp_account_update_success_message', __( 'Account updated successfully.', 'userswp' ), $data );
-		$message       = aui()->alert( array(
-				'type'    => 'success',
-				'content' => $message
-			)
-		);
-		$uwp_notices[] = array( 'account' => $message );
+				update_user_meta(get_current_user_id(), 'uwp_update_email_hash', $new_admin_email);
+
+                $new_email_link = add_query_arg(
+                    array(
+                        'uwp_new_email' => 'yes',
+                        'key' => $hash,
+                        'login' => $user_data->user_login
+                    ),
+	                uwp_get_account_page_url()
+                );
+
+				$email_vars = array(
+					'user_id'     => $user_id,
+					'new_email' => $result['email'],
+					'new_email_link' => esc_url( $new_email_link ),
+				);
+
+				UsersWP_Mails::send( $result['email'], 'account_new_email_activation', $email_vars );
+
+				$message       = apply_filters( 'uwp_account_pending_new_email_activation_message', __( 'Account updated successfully. The new address will become active once you confirm via activation link sent to your new email.', 'userswp' ), $data );
+				$message       = aui()->alert( array(
+						'type'    => 'success',
+						'content' => $message
+					)
+				);
+
+				$uwp_notices[] = array( 'account' => $message );
+
+		} else {
+			$email_vars = array(
+				'user_id'     => $user_id,
+				'form_fields' => $form_fields,
+			);
+
+			UsersWP_Mails::send( $user_data->user_email, 'account_update', $email_vars );
+
+			$message       = apply_filters( 'uwp_account_update_success_message', __( 'Account updated successfully.', 'userswp' ), $data );
+			$message       = aui()->alert( array(
+					'type'    => 'success',
+					'content' => $message
+				)
+			);
+
+			$uwp_notices[] = array( 'account' => $message );
+        }
 
 		do_action( 'uwp_after_process_account', $data );
 

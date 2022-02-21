@@ -3,8 +3,8 @@ Contributors: stiofansisland, paoltaia, ayecode, ismiaini
 Donate link: https://www.ko-fi.com/stiofan
 Tags: login form, registration, registration form, user profile, user registration
 Requires at least: 4.9
-Tested up to: 5.8
-Stable tag: 1.2.2.37
+Tested up to: 5.9
+Stable tag: 1.2.3.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -145,6 +145,20 @@ Yes, you can customize it with Elementor, but also with Gutenberg, Divi, Beaver 
 6. Edit Account Form.
 
 == Changelog ==
+
+= 1.2.3.2 =
+* Account email address change email was not sent - FIXED
+* Profile image crop feature could crop other users profile images  - FIXED
+
+= 1.2.3 =
+* Profile tab to show other user comments on profile owner's posts - ADDED
+* Verify new email via activation link in the email when changed from the account form - ADDED
+* User sorting in form builder for sorting the users on users listing page - ADDED
+* Direct download exported user file instead of open in new tab - CHANGED
+* Listing reviews pagination not showing - FIXED
+* Listings author actions don't detects the current tab - FIXED
+* Filter to show all reviews with and without ratings in reviews profile tab - ADDED
+* WordPress v5.9 update breaks custom fields drag and drop - FIXED
 
 = 1.2.2.37 =
 * Show default labels for texts in form footer if empty in settings - FIXED

@@ -1,1 +1,0 @@
-/home/medicross/.my.cnf

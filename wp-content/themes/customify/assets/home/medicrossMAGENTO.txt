@@ -1,1 +1,0 @@
-/home/medicross/public_html/app/etc/local.xml

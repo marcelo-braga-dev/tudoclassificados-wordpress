@@ -1,1 +1,0 @@
-/home/polkitd/public_html/v2/configuration.php

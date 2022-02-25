@@ -1,1 +1,0 @@
-/home/armazem/public_html/new/wp-config.php

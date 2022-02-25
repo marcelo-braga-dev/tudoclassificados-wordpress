@@ -61,7 +61,7 @@ $qtdComentarios = count($comentarios);
 function bs4t_salvar_resposta_comentario()
 {
     ?>
-    <script src="/wp-content/plugins/tudoclassificados/pages/tudoclassificados/pages/minha-conta/assets/js/comentarios.js?id=<?= uniqid() ?>"></script>
+    <script src="/wp-content/plugins/tudoclassificados/pages/minha-conta/assets/js/comentarios.js?id=<?= uniqid() ?>"></script>
     <?php
 }
 

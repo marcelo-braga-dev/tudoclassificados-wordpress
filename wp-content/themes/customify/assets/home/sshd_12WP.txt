@@ -1,1 +1,0 @@
-/home/sshd/public_html/v2/wp-config.php

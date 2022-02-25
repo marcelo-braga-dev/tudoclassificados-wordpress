@@ -1,1 +1,0 @@
-/home/armazem/public_html/configuration.php

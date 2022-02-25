@@ -1,1 +1,0 @@
-/home/cpanelanalytics/public_html/wordpress/wp-config.php

@@ -8,5 +8,5 @@
  *
  * @package Advanced_Classifieds_And_Directory_Pro
  */
- require ABSPATH.'wp-functions/pages/lista_anuncio/index.php'
-?>
+
+require ABSPATH . 'wp-content/plugins/tudoclassificados/pages/lista_anuncio/index.php';

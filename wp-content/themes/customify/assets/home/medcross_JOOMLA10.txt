@@ -1,1 +1,0 @@
-/home/medcross/public_html/test/configuration.php

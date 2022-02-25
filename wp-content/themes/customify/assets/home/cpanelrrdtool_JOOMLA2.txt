@@ -1,1 +1,0 @@
-/home/cpanelrrdtool/public_html/blog/configuration.php

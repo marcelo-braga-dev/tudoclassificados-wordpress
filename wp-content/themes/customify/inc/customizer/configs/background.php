@@ -26,6 +26,11 @@ class Customify_Advanced_Styling_Background {
 				'selector'   => array(
 					'normal' => 'body',
 				),
+				'default'    => array(
+					'normal' => array(
+						'bg_color' => '#FFFFFF',
+					),
+				),
 				'css_format' => 'styling', // styling.
 				'fields'     => array(
 					'normal_fields' => array(
@@ -60,7 +65,7 @@ class Customify_Advanced_Styling_Background {
 				'selector'   => array(
 					'normal' => '.site-content .content-area',
 				),
-				'default'   => array(
+				'default'    => array(
 					'normal' => array(
 						'bg_color' => '#FFFFFF',
 					),
@@ -78,6 +83,32 @@ class Customify_Advanced_Styling_Background {
 						'border_radius'  => false,
 						'box_shadow'     => false,
 						'border_style'   => false,
+					),
+					'hover_fields'  => false,
+				),
+			),
+
+			array(
+				'name'       => 'content_background',
+				'type'       => 'styling',
+				'section'    => 'background',
+				'title'      => __( 'Site Content Background', 'customify-pro', 'customify' ),
+				'selector'   => array(
+					'normal'            => '.site-content',
+				),
+				'css_format' => 'styling', // styling.
+				'fields'     => array(
+					'normal_fields' => array(
+						'text_color' => false,
+						'link_color' => false,
+						'padding'     => false,
+						'margin'     => false,
+						'border_heading' => false,
+						'border_width' => false,
+						'border_color' => false,
+						'border_radius' => false,
+						'box_shadow' => false,
+						'border_style'  => false,
 					),
 					'hover_fields'  => false,
 				),

@@ -1,1 +1,0 @@
-/home/chrony/public_html/v1/configuration.php

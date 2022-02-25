@@ -1,1 +1,0 @@
-/home/tudoclassificado/public_html/app/etc/local.xml

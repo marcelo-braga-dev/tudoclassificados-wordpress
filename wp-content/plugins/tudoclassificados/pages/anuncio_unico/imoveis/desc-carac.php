@@ -5,7 +5,7 @@
             <h5 class="d-block"><b>Descrição</b></h5>
             <div class="w-100"></div>
             <span>
-                < ?= //filtrar_texto(nl2br(wp_kses_post($description))); ?>
+                <?= filtrar_texto(nl2br(wp_kses_post($description))); ?>
             </span>
         </div>
     </div>

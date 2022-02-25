@@ -1,1 +1,0 @@
-/home/camabox/public_html/portal/configuration.php

@@ -202,7 +202,7 @@ $limiteIngaia = $max_imoveis - intval($qtdImoveis);
 function bs4t_integracao_ingaia()
 {
 ?>
-   <script src="/wp-content/plugins/tudoclassificados/plugins/tudoclassificados/aplicacoes/ingaia/assets/main.js?id=<?= uniqid() ?>"></script>
+   <script src="/wp-content/plugins/tudoclassificados/aplicacoes/ingaia/assets/main.js?id=<?= uniqid() ?>"></script>
 <?php
 }
 add_action('wp_footer', 'bs4t_integracao_ingaia', 102);

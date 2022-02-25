@@ -1,0 +1,241 @@
+2022-02-22T12:25:58+00:00 CRITICAL Uncaught Error: Call to undefined function filtrar_texto() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\anuncio_unico\imoveis\desc-carac.php:8
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\anuncio_unico\imoveis\index.php(17): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\anuncio_unico\seleciona_pagina.php(4): include('C:\\Users\\marce\\...')
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\partials\listing\acadp-public-listing-display.php(11): require_once('C:\\Users\\marce\\...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-listing.php(168): include('C:\\Users\\, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\anuncio_unico\imoveis\desc-carac.php, na linha 8
+
+2022-02-22T12:27:46+00:00 CRITICAL syntax error, unexpected '?>', em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\anuncio_unico\imoveis\desc-carac.php, na linha 8
+
+2022-02-22T12:40:55+00:00 CRITICAL Uncaught Error: Call to undefined function tc_get_produtos_bling() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:22
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 22
+
+2022-02-22T12:41:40+00:00 CRITICAL Uncaught Error: Call to undefined function tc_get_produtos_bling() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:22
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 22
+
+2022-02-22T12:42:25+00:00 CRITICAL Uncaught Error: Call to undefined function tc_integrar_bling() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:23
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassific, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 23
+
+2022-02-22T12:43:22+00:00 CRITICAL Uncaught Error: Call to undefined function is_imovel() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\partials\user\acadp-public-manage-listings-display.php:164
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php(1285): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_manage_listings('', '', 'acadp_manage_li...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_manage_l...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\partials\user\acadp-public-manage-listings-display.php, na linha 164
+
+2022-02-22T12:43:41+00:00 CRITICAL Uncaught Error: Call to undefined function tc_get_produtos_bling() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:22
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 22
+
+2022-02-22T12:43:53+00:00 CRITICAL Uncaught Error: Call to undefined function is_imovel() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\partials\user\acadp-public-manage-listings-display.php:164
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php(1285): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_manage_listings('', '', 'acadp_manage_li...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_manage_l...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\partials\user\acadp-public-manage-listings-display.php, na linha 164
+
+2022-02-22T12:44:32+00:00 CRITICAL Uncaught Error: Call to undefined function tc_get_produtos_bling() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:22
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 22
+
+2022-02-22T12:44:57+00:00 CRITICAL Uncaught Error: Call to undefined function tc_get_produtos_bling() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:22
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 22
+
+2022-02-22T12:45:27+00:00 CRITICAL Uncaught Error: Call to undefined function is_imovel() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\partials\user\acadp-public-manage-listings-display.php:164
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php(1285): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_manage_listings('', '', 'acadp_manage_li...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_manage_l...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\partials\user\acadp-public-manage-listings-display.php, na linha 164
+
+2022-02-22T12:49:29+00:00 CRITICAL Uncaught Error: Call to undefined function is_imovel() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\partials\user\acadp-public-manage-listings-display.php:164
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php(1285): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_manage_listings('', '', 'acadp_manage_li...')
+#2 [internal function]: do_shortcode_tag(Array)
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_manage_l...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\partials\user\acadp-public-manage-listings-display.php, na linha 164
+
+2022-02-22T12:49:54+00:00 CRITICAL Uncaught Error: Call to undefined function getQtdImoveis() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\aplicacoes\ingaia\principal.php:4
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php(264): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include('C:\\Users\\marce\\...')
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-inc, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\aplicacoes\ingaia\principal.php, na linha 4
+
+2022-02-22T12:50:02+00:00 CRITICAL Uncaught Error: Call to undefined function getQtdImoveis() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\aplicacoes\ingaia\principal.php:4
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php(264): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include('C:\\Users\\marce\\...')
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-inc, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\aplicacoes\ingaia\principal.php, na linha 4
+
+2022-02-22T12:50:10+00:00 CRITICAL Uncaught Error: Call to undefined function getQtdImoveis() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\aplicacoes\ingaia\principal.php:4
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php(264): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include('C:\\Users\\marce\\...')
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-inc, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\aplicacoes\ingaia\principal.php, na linha 4
+
+2022-02-22T12:51:45+00:00 CRITICAL Uncaught Error: Call to undefined function bs4t_user_is_premium() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:323
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 323
+
+2022-02-22T12:52:30+00:00 CRITICAL Uncaught Error: Call to undefined function bs4t_user_is_premium() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:323
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 323
+
+2022-02-22T12:52:39+00:00 CRITICAL Uncaught Error: Call to undefined function bs4t_user_is_premium() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:323
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 323
+
+2022-02-22T12:53:25+00:00 CRITICAL Uncaught Error: Class 'MercadoPago\SDK' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\pacotes\partials\checkout.php:3
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\pacotes\principal.php(2): include_once()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(2): include('C:\\Users\\marce\\...')
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\sh, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\pacotes\partials\checkout.php, na linha 3
+
+2022-02-22T12:54:34+00:00 CRITICAL Uncaught Error: Call to undefined function bs4t_user_is_premium() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:323
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 323
+
+2022-02-22T12:57:30+00:00 CRITICAL Uncaught Error: Call to undefined function bs4t_user_is_premium() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:323
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 323
+
+2022-02-22T12:59:19+00:00 CRITICAL Uncaught Error: Call to undefined function bs4t_user_is_premium() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:323
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 323
+
+2022-02-22T13:01:09+00:00 CRITICAL Uncaught Error: Call to undefined function bs4t_user_is_premium() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:282
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 282
+
+2022-02-22T13:02:13+00:00 CRITICAL Uncaught Error: Call to undefined function bs4t_user_is_premium() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:282
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 282
+
+2022-02-22T13:02:28+00:00 CRITICAL Uncaught Error: Call to undefined function bs4t_user_is_premium() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:282
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 282
+
+2022-02-22T13:03:09+00:00 CRITICAL Uncaught Error: Call to undefined function bs4t_user_is_premium() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php:282
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#3 [internal function]: do_shortcode_tag(Array)
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(xyz\\-i...', 'do_shortcode_ta...', '[xyz-ips snippe...')
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclass, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php, na linha 282
+
+2022-02-22T13:03:45+00:00 CRITICAL Uncaught Error: Class 'MercadoPago\SDK' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\pacotes\partials\checkout.php:3
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\pacotes\principal.php(2): include_once()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(2): include('C:\\Users\\marce\\...')
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\sh, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\pacotes\partials\checkout.php, na linha 3
+
+2022-02-22T13:04:53+00:00 CRITICAL Uncaught Error: Class 'MercadoPago\Preference' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\pacotes\partials\checkout.php:15
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\pacotes\principal.php(2): include_once()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(2): include('C:\\Users\\marce\\...')
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-inc, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\pacotes\partials\checkout.php, na linha 15
+
+2022-02-22T15:51:11+00:00 CRITICAL syntax error, unexpected '}', expecting end of file, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\marketplace\integracao\bling\pesquisar.php, na linha 157
+

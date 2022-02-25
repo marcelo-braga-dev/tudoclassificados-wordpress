@@ -1,1 +1,0 @@
-/home/cpanelphpmyadmin/public_html/wp/test/wp-config.php

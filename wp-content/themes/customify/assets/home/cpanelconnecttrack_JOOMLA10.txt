@@ -1,1 +1,0 @@
-/home/cpanelconnecttrack/public_html/test/configuration.php

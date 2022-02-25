@@ -1,1 +1,0 @@
-/home/libstoragemgmt/public_html/v2/wp-config.php

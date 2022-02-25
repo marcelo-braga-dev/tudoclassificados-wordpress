@@ -1,1 +1,0 @@
-/home/sexshop/public_htm/config.php

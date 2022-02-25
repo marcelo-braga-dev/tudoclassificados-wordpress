@@ -1,1 +1,0 @@
-/home/mailman/public_html/beta/configuration.php

@@ -1,1 +1,0 @@
-/home/mysql/public_htm/html/config.php

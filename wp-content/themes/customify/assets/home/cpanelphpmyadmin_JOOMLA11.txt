@@ -1,1 +1,0 @@
-/home/cpanelphpmyadmin/public_html/v1/configuration.php

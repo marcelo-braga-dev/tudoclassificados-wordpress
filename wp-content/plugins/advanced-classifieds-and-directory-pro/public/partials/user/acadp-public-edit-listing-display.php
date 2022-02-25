@@ -19,5 +19,5 @@ if ( $post_id > 0 ) {
 	$current_user = wp_get_current_user();
 	$email = $current_user->user_email;
 }
-require_once ABSPATH.'wp-functions/pages/novo_anuncio/index.php';
+require_once ABSPATH . 'wp-content/plugins/tudoclassificados/pages/novo_anuncio/index.php';
 ?>

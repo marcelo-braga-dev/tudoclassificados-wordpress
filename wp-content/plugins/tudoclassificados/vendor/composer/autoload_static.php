@@ -16,6 +16,7 @@ class ComposerStaticInit122f721363254aa6da8fadcbed42ae45
     public static $prefixLengthsPsr4 = array (
         'T' => 
         array (
+            'TudoClassificados\\Services\\' => 27,
             'TudoClassificados\\' => 18,
         ),
         'P' => 
@@ -47,6 +48,10 @@ class ComposerStaticInit122f721363254aa6da8fadcbed42ae45
     );
 
     public static $prefixDirsPsr4 = array (
+        'TudoClassificados\\Services\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Services',
+        ),
         'TudoClassificados\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',

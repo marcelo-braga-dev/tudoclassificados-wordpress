@@ -11,9 +11,7 @@ class CadastrarProdutos
         $user = wp_get_current_user();
         $userId = get_current_user_id();
 
-        //$preco = number_format($dados->infos['preco'], 2, '.', '');
         $conteudoAnuncio = $dados->produto->descricaoCurta;
-
 
         // Novo Anuncio
         $anuncio_imovel = array(
@@ -26,9 +24,8 @@ class CadastrarProdutos
             'post_author' => $userId,
             'meta_input' => array(
                 'id' => wp_strip_all_tags($dados->produto->id),
-                'origem' => 'bling',
-                'tipo' => $dados->origem,
-                // '_thumbnail_externo_id' => $thumbnail_externo,
+                'tipo' => $dados->tipo,
+                'origem' => $dados->origem,
                 'video' => wp_strip_all_tags($dados->produto->urlVideo),
                 'email' => wp_strip_all_tags($user->user_email),
                 'website' => wp_strip_all_tags($dados->produto->linkExterno),

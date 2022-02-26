@@ -1,0 +1,8 @@
+2022-02-25T15:07:12+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Integracoes\Bling\Requisicao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\Services\Pages\MinhaConta\Integracoes\bling.php:9
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\Services\Pages\MinhaConta\includes.php(19): tc_get_produtos_bling()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php(3): require_once('C:\\Users\\marce\\...')
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include('C:\\Users\\marce\\...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#4 C:\Users\marce\CodigosFonte\TudoClassi, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\Services\Pages\MinhaConta\Integracoes\bling.php, na linha 9
+

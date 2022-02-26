@@ -10,4 +10,5 @@ class DadosAnuncio
     public $infos;
     public $dataExpiracao;
     public $idImagens;
+    public $tipo;
 }

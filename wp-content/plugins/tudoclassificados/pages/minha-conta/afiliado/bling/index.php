@@ -4,7 +4,7 @@
             <div class="card-header bg-white">
                 <div class="row justify-content-between align-items-center px-3">
                     <div>
-                        <h3 class="mb-0">Anúncios como Filiado</h3>
+                        <h3 class="mb-0">Anúncios como Marketplace</h3>
                     </div>
                     <div>
                         <div class="icon icon-shape bg-primary text-white rounded-circle shadow">
@@ -22,8 +22,8 @@
                                    value="<?= $_GET['token_bling'] ?>">
                         </div>
                         <div class="col-12  mb-2">
-                            <input type="hidden" name="filiado" value="true">
-                            <input type="hidden" name="aba_menu" value="filiado_bling">
+                            <input type="hidden" name="marketplace-bling" value="true">
+                            <input type="hidden" name="aba_menu" value="marketplace-integrar-bling">
                             <button type="submit" class="btn btn-primary rounded">Pesquisar</button>
                         </div>
                     </div>
@@ -34,20 +34,28 @@
                             <div class="alert alert-danger">
                                 <?= $produtosBling['erro']['msg'] ?>
                             </div>
-                        <?php endif ?>
-                        <? // if (count($produtosBling['produtos']) && $_GET['filiado']) : ?>
+                        <?php endif; ?>
+                        <?php if (!empty($produtosBling['produtos']) && $_GET['afiliado-bling']) { ?>
+                            <hr class="mb-1">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <p>
+                                        Selecone os produtos que deseja integrar, preencha as informações e para
+                                        finalizar, clique no botão "Integrar".
+                                    </p>
+                                </div>
+                            </div>
                             <form method="POST">
                                 <button type="submit" class="btn btn-success rounded my-3">Integrar Anúncios
                                     Selecionados
                                 </button>
-                                <input type="hidden" name="integrar_filiado_bling" value="true">
+                                <input type="hidden" name="integrar_marketplace_bling" value="true">
                                 <div class="table-responsive">
                                     <table class="table align-items-center table-flush">
                                         <thead class="thead-light">
                                         <tr>
-                                            <th scope="col"></th>
                                             <th scope="col">Integrar</th>
-                                            <th scope="col">Descrição</th>
+                                            <th scope="col">Produto</th>
                                         </tr>
                                         </thead>
                                         <tbody class="list">
@@ -56,9 +64,10 @@
                                             $anuncioComImagens = count($produto->imagem) ? true : false; ?>
                                             <tr>
                                                 <td scope="row" style="width: 2rem;">
-                                                    <?= $i++ ?>.
-                                                </td>
-                                                <td>
+                                                    <input type="hidden" name="token_bling" class="form-control"
+                                                           value="<?= $_GET['token_bling'] ?>">
+                                                    <input type="hidden" name="produto[<?= $produto->id ?>][id]"
+                                                           value="<?= $produto->id ?>">
                                                     <label class="custom-toggle">
                                                         <input type="checkbox" id="customCheck<?= $j ?>"
                                                                class="input-check custom-control-input" name="checks[]"
@@ -68,32 +77,100 @@
                                                     </label>
                                                 </td>
                                                 <td style="white-space: normal !important;">
-                                                    <?= $produto->descricao; ?>
-
-                                                    <div class="avatar-group d-block">
-                                                        <?php foreach ($produto->imagem as $imagem) : ?>
-                                                            <a href="#" class="avatar avatar-sm rounded-circle"
-                                                               data-toggle="tooltip">
-                                                                <img src="<?= $imagem->link ?>"
-                                                                     onerror="errorImg(this)">
-                                                            </a>
-                                                        <?php endforeach ?>
-                                                    </div>
-
-                                                    <?php if (!$anuncioComImagens) : ?>
-                                                        <span class="text-danger">Anúncio sem imagens.</span>
-                                                    <?php endif ?>
-
-                                                    <div class="input-group">
-                                                        <div class="input-group-prepend">
-                                                            <small class="input-group-text"
-                                                                   style="font-size: 13px !important;">Link
-                                                                Externo</small>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <h4><?= $produto->descricao; ?></h4>
                                                         </div>
-                                                        <input type="text" class="form-control"
-                                                               name="produto[<?= $produto->id ?>][link_externo]"
-                                                               placeholder="https://" aria-label="Link Externo"
-                                                               value="<?= $produto->linkExterno; ?>" <?= $anuncioComImagens ? '' : 'disabled' ?>>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <label>Preço</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <small class="input-group-text">R$</small>
+                                                                </div>
+                                                                <input type="number" step="0.01" class="form-control"
+                                                                       name="produto[<?= $produto->id ?>][preco]"
+                                                                       placeholder="0,00" aria-label="Preco"
+                                                                       value="<?= number_format($produto->preco, 2, '.', ''); ?>" <?= $anuncioComImagens ? '' : 'disabled' ?>>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5 align-self-end">
+                                                            <div class="avatar-group d-block">
+                                                                <?php foreach ($produto->imagem as $imagem) : ?>
+                                                                    <a class="avatar avatar rounded-circle"
+                                                                       data-toggle="tooltip">
+                                                                        <img src="<?= $imagem->link ?>"
+                                                                             onerror="errorImg(this)">
+                                                                    </a>
+                                                                <?php endforeach ?>
+                                                            </div>
+
+                                                            <?php if (!$anuncioComImagens) : ?>
+                                                                <span class="text-danger">Anúncio sem imagens.</span>
+                                                            <?php endif ?>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <label>Categoria</label>
+                                                            <?=
+                                                            bs4t_select_categorias(
+                                                                'produto[' . $produto->id . '][categoria]',
+                                                                $produto->descricaoCurta . ' ' . $produto->descricao . ' ' . $produto->categoria->descricao,
+                                                                $anuncioComImagens
+                                                            )
+                                                            ?>
+                                                        </div>
+                                                    </div>
+                                                    <hr class="my-2">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <label>Largura</label>
+                                                            <div class="input-group">
+                                                                <input type="number" class="form-control"
+                                                                       name="produto[<?= $produto->id ?>][largura]"
+                                                                       placeholder="0,00"
+                                                                       value="<?= $produto->larguraProduto; ?>" <?= $anuncioComImagens ? '' : 'disabled' ?>>
+                                                                <div class="input-group-append">
+                                                                    <small class="input-group-text">cm</small>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label>Altura</label>
+                                                            <div class="input-group">
+                                                                <input type="number" class="form-control"
+                                                                       name="produto[<?= $produto->id ?>][altura]"
+                                                                       placeholder="0,00"
+                                                                       value="<?= $produto->alturaProduto; ?>" <?= $anuncioComImagens ? '' : 'disabled' ?>>
+                                                                <div class="input-group-append">
+                                                                    <small class="input-group-text">cm</small>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label>Profundidade</label>
+                                                            <div class="input-group">
+                                                                <input type="number" class="form-control"
+                                                                       name="produto[<?= $produto->id ?>][profundidade]"
+                                                                       placeholder="0,00"
+                                                                       value="<?= $produto->profundidadeProduto; ?>" <?= $anuncioComImagens ? '' : 'disabled' ?>>
+                                                                <div class="input-group-append">
+                                                                    <small class="input-group-text">cm</small>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <label>Peso</label>
+                                                            <div class="input-group">
+                                                                <input type="number" class="form-control"
+                                                                       name="produto[<?= $produto->id ?>][peso]"
+                                                                       placeholder="0,00"
+                                                                       value="<?= number_format($produto->pesoBruto, 2, '.', ''); ?>" <?= $anuncioComImagens ? '' : 'disabled' ?>>
+                                                                <div class="input-group-append">
+                                                                    <small class="input-group-text">kg</small>
+                                                                </div>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -102,80 +179,10 @@
                                     </table>
                                 </div>
                             </form>
-                        <?php //endif ?>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
-
-            <?php
-            $num_page = $_GET['page_bling'];
-
-            if (!$num_page) $num_page = 1;
-
-            if ($num_page === 1) {
-                $num_page = 2;
-                $pag_disabled_ant = 'disabled';
-                $pag_disabled_1 = 'disabled';
-            } else {
-                $pag_disabled_2 = 'disabled';
-            }
-            $p1 = $num_page - 1;
-            $p2 = $num_page;
-            $p3 = $num_page + 1;
-
-            if (!$p1) {
-                $pag_esconder_1 = 'display:none;';
-                $pag_disabled_ant = 'disabled';
-            }
-            if ($i < 100) {
-                $esconder_pag = 'display:none;';
-                $pag_disabled_pro = ' disabled';
-            }
-            if ($erro_14 || $num_page === 2 && $i < 100) {
-                $esconder_opc_pag = 'style="display:none;"';
-                $bg3 = 'bg-primary text-white"';
-            }
-
-            if (empty($_GET['page_bling'])) $bg1 = 'bg-primary text-white"';
-            else $bg2 = 'bg-primary text-white"';
-
-            $query = '?' .
-                'token_bling=' . $_GET['token_bling'] . '&' .
-                'filiado=' . $_GET['filiado'] . '&' .
-                'aba_menu=' . $_GET['aba_menu'] . '&';
-
-            $url = $_SERVER['SCRIPT_URL'] . $query;
-            ?>
-
-            <nav <?= $esconder_opc_pag ?>>
-                <ul class="pagination justify-content-center">
-                    <li class="page-item <?php echo $pag_disabled_ant ?>" style="margin:0px">
-                        <a class="page-link" href="<?= $url ?>page_bling=<?php echo $p1 ?>" aria-label="Anterior">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Anterior</span>
-                        </a>
-                    </li>
-                    <li class="page-item <?php echo $pag_disabled_1 ?>"
-                        style="margin:0px; <?php echo $pag_esconder_1 ?>">
-                        <a class="page-link <?= $bg1 ?>"
-                           href="<?= $url ?>page_bling=<?php echo $p1 ?>"><?php echo $p1 ?></a>
-                    </li>
-                    <li class="page-item <?php echo $pag_disabled_2 ?>" style="margin:0px">
-                        <a class="page-link <?= $bg2 ?>"
-                           href="<?= $url ?>page_bling=<?php echo $p2 ?>"><?php echo $p2 ?></a>
-                    </li>
-                    <li class="page-item <?php echo $pag_disabled_3 ?>" style="margin:0px;<?php echo $esconder_pag ?>">
-                        <a class="page-link <?= $bg3 ?>"
-                           href="<?= $url ?>page_bling=<?php echo $p3 ?>"><?php echo $p3 ?></a>
-                    </li>
-                    <li class="page-item <?php echo $pag_disabled_pro ?>" style="margin:0px">
-                        <a class="page-link" href="<?= $url ?>page_bling=<?php echo $p3 ?>" aria-label="Próximo">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Próximo</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
         </div>
     </div>
 </div>

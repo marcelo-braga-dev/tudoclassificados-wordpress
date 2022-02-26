@@ -16,7 +16,7 @@
             <div class="card-body">                
                 <div class="row">
                     <div class="col-12">
-                        <?= do_shortcode("[acadp_manage_listings]"); ?>
+                        <?= do_shortcode("[acadp_manage_listings_classificados]"); ?>
                     </div>
                 </div>
             </div>

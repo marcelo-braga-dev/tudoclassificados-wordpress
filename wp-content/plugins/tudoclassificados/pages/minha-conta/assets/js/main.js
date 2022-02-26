@@ -10,8 +10,8 @@ $(function () {
     }
 
     $('.btn-premium').change(function () {
-        var valor = 0;
-        var post_id = $(this).attr('post-id');
+        let valor = 0;
+        let post_id = $(this).attr('post-id');
 
         if ($(this).is(':checked')) {
             valor = 1;
@@ -21,13 +21,12 @@ $(function () {
                 if (maxPremiumImovel < 1) {
                     $('.btn-premium-imovel').attr('disabled', true);
                 }
-                console.log(maxPremiumImovel);
+
             } else {
                 maxPremiumGeral--;
                 if (maxPremiumGeral < 1) {
                     $('.btn-premium-geral').attr('disabled', true);
                 }
-                console.log(maxPremiumGeral);
             }
         }
 
@@ -39,12 +38,11 @@ $(function () {
             'valor': valor,
             'post_id': post_id,
             'editar-premium': true
-        },
-            function (resposta) {
+        }, function (resposta) {
                 $.LoadingOverlay("hide");
-
+                console.log('xXx');
+                console.log(resposta);
             }
         );
-
     });
 });

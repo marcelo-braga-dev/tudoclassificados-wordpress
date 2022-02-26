@@ -22,7 +22,5 @@ define('TUDOCLASSIFICADOS_PATH', plugin_dir_path(TUDOCLASSIFICADOS__FILE__));
 define('TUDOCLASSIFICADOS_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 
 require_once 'vendor/autoload.php';
-require_once 'functions.php';
-require_once 'src/functions.php';
-
-// require_once 'includes/integracao-bling.php';
+require_once 'Helpers/geral.php';
+require_once 'Helpers/anuncios-premium.php';

@@ -2,7 +2,8 @@
     "name": "empreentech/tudoclassificados",
     "autoload": {
         "psr-4": {
-            "TudoClassificados\\": "src/"
+            "TudoClassificados\\": "src/",
+            "TudoClassificados\\Services\\": "Services/"
         }
     },
     "require": {

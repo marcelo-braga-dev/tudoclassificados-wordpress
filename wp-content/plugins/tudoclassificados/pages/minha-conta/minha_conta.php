@@ -1,6 +1,6 @@
 <?php
 if (is_user_logged_in()) :
-    require_once TUDOCLASSIFICADOS_PATH . 'Services/Pages/MinhaConta/includes.php';
+    require_once TUDOCLASSIFICADOS_PATH . 'Services/Pages/MinhaConta/index.php';
     ?>
     <style>
         .seleciona-linha-table {
@@ -68,13 +68,13 @@ if (is_user_logged_in()) :
                             </div>
                         </div>
                     </a>
-                    <a class="text-main mb-2 <?= $abaMenu == 'classificados-integrar-bling' ?? 'active' ?>"
+                    <a class="text-main mb-2 <?= $abaMenu == 'classificados-integrar-bling' ? 'active' : '' ?>"
                        id="classificados-integrar-tab" data-toggle="list"
                        href="#classificados-integrar" role="tab">
                         <div class="row nav-item">
                             <div class="col-2 text-right"></div>
                             <div class="col-10 pl-4">
-                                <span class="text-sub-menu">Integrar Anúncios</span>
+                                <span class="text-sub-menu">Integrar com Bling</span>
                             </div>
                         </div>
                     </a>
@@ -91,7 +91,7 @@ if (is_user_logged_in()) :
                             </div>
                         </div>
                     </a>
-                    <a class="text-main mb-2" id="anuncios_filiado-tab" data-toggle="list" href="#anuncios_filiado"
+                    <a class="text-main mb-2 <?= $abaMenu == 'marketplace' ? 'active' : '' ?>" id="anuncios_filiado-tab" data-toggle="list" href="#marketplace_anuncios"
                        role="tab">
                         <div class="row nav-item">
                             <div class="col-2 text-right"></div>
@@ -100,12 +100,12 @@ if (is_user_logged_in()) :
                             </div>
                         </div>
                     </a>
-                    <a class="text-main mb-2 <?= $abaMenu == 'filiado_bling' ? 'active' : '' ?>"
-                       id="marketplace_pesquisar-tab" data-toggle="list" href="#marketplace_pesquisar" role="tab">
+                    <a class="text-main mb-2 <?= $abaMenu == 'marketplace-integrar-bling' ? 'active' : '' ?>"
+                       id="marketplace_pesquisar-tab" data-toggle="list" href="#marketplace_integrar" role="tab">
                         <div class="row nav-item">
                             <div class="col-2 text-right"></div>
                             <div class="col-10 pl-4">
-                                <span class="text-sub-menu">Integrar Anúncios</span>
+                                <span class="text-sub-menu">Integrar com Bling</span>
                             </div>
                         </div>
                     </a>
@@ -153,7 +153,7 @@ if (is_user_logged_in()) :
                             </div>
                         </div>
                     </a>
-                    <a class="text-main mb-2" id="imoveis_anuncios-tab" data-toggle="list" href="#imoveis_anuncios"
+                    <a class="text-main mb-2 <?= $abaMenu == 'imoveis' ? 'active' : '' ?>" id="imoveis_anuncios-tab" data-toggle="list" href="#imoveis_anuncios"
                        role="tab">
                         <div class="row nav-item">
                             <div class="col-2 text-right"></div>
@@ -162,7 +162,7 @@ if (is_user_logged_in()) :
                             </div>
                         </div>
                     </a>
-                    <a class="text-main mb-2 <?= $abaMenu == 'imoveis_ingaia' ? 'active' : '' ?>"
+                    <a class="text-main mb-2 <?= $abaMenu == 'imoveis-integrar-ingaia' ? 'active' : '' ?>"
                        id="imoveis_ingaia-tab" data-toggle="list" href="#imoveis_ingaia" role="tab">
                         <div class="row nav-item">
                             <div class="col-2 text-right"></div>
@@ -233,6 +233,14 @@ if (is_user_logged_in()) :
                         <?php include 'classificados/integrar/integrar.php' ?>
                     </div>
 
+                    <!-- Marketplace -->
+                    <div class="tab-pane fade <?= $abaMenu == 'marketplace' ? 'active show' : '' ?>" id="marketplace_anuncios" role="tabpanel">
+                        <?php include 'marketplace/anuncios.php' ?>
+                    </div>
+                    <div class="tab-pane fade <?= $abaMenu == 'marketplace-integrar-bling' ? 'active show' : '' ?>" id="marketplace_integrar" role="tabpanel">
+                        <?php include 'marketplace/integracao/bling/index.php' ?>
+                    </div>
+
                     <!-- Afiliado -->
                     <div class="tab-pane fade" id="anuncios_filiado" role="tabpanel">
                         <?php include 'afiliado/anuncios.php' ?>
@@ -243,17 +251,12 @@ if (is_user_logged_in()) :
                     </div>
 
                     <!-- Imoveis -->
-                    <div class="tab-pane fade" id="imoveis_anuncios" role="tabpanel">
+                    <div class="tab-pane fade <?= $abaMenu == 'imoveis' ? 'active show' : '' ?>" id="imoveis_anuncios" role="tabpanel">
                         <?php include 'imoveis/anuncios.php'; ?>
                     </div>
-                    <div class="tab-pane fade <?= $abaMenu == 'imoveis_ingaia' ? 'active show' : '' ?>"
+                    <div class="tab-pane fade <?= $abaMenu == 'imoveis-integrar-ingaia' ? 'active show' : '' ?>"
                          id="imoveis_ingaia" role="tabpanel">
-                        <?php include ABSPATH . 'wp-content/plugins/tudoclassificados/aplicacoes/ingaia/principal.php'; ?>
-                    </div>
-
-                    <!-- Marketplace -->
-                    <div class="tab-pane fade" id="marketplace_pesquisar" role="tabpanel">
-                        <?php include 'marketplace/integracao/bling/pesquisar.php' ?>
+                        <?php include 'imoveis/ingaia/index.php'; ?>
                     </div>
 
                     <!-- Comentarios -->
@@ -322,6 +325,11 @@ if (is_user_logged_in()) :
         const abaIntegracaoBling = '<?= $_GET['page_bling'] . $_POST['api-key-bling'] ?>';
     </script>
 
+
+
+<?php
+function bs4_script_abas_minha_conta()
+{ ?>
     <script>
         $(function () {
             $('.input-check').change(function () {
@@ -333,12 +341,8 @@ if (is_user_logged_in()) :
             });
         })
     </script>
-
-<?php
-function bs4_script_abas_minha_conta()
-{ ?>
     <script src="/wp-content/plugins/tudoclassificados/pages/minha-conta/assets/js/main.js?id=<?= uniqid() ?>"></script>
-    <script src="/wp-content/plugins/tudoclassificados/pages/minha-conta/assets/js/abas.js?id=<?= uniqid() ?>"></script>
+<!--    <script src="/wp-content/plugins/tudoclassificados/pages/minha-conta/assets/js/abas.js?id=< ?= uniqid() ?>"></script>-->
     <?php
 }
 

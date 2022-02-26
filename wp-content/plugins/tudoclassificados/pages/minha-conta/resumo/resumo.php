@@ -12,15 +12,6 @@ if (!empty($_POST['form-contato'])) {
     wp_redirect('/minha-conta');
 }
 
-$resultado = $wpdb->get_results("SELECT max_anuncios, tipo, `status` 
-                                FROM class_imp_contas_premium 
-                                WHERE user_id = '$user_id' AND `status` = 'approved'");
-
-foreach ($resultado as $anuncio) {
-    if ($anuncio->tipo == 'geral') $qtd_geral_premium += $anuncio->max_anuncios;
-    if ($anuncio->tipo == 'imoveis') $qtd_imoveis_premium += $anuncio->max_anuncios;
-    if ($anuncio->tipo == 'automoveis') $qtd_automoveis_premium += $anuncio->max_anuncios;
-}
 ?>
 
 <div class="row">
@@ -117,15 +108,15 @@ foreach ($resultado as $anuncio) {
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <small>Produtos/Serviços</small>
-                        <span class="badge badge-light" style="font-size: 14px;"><?= intval($qtd_geral_premium); ?></span>
+                        <span class="badge badge-light" style="font-size: 14px;"><?= $limiteAnunciosPremium['geral']; ?></span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <small>Imóveis</small>
-                        <span class="badge badge-light" style="font-size: 14px;"><?= intval($qtd_imoveis_premium); ?></span>
+                        <span class="badge badge-light" style="font-size: 14px;"><?= $limiteAnunciosPremium['imoveis']; ?></span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between align-items-center">
                         <small>Automóveis</small>
-                        <span class="badge badge-light" style="font-size: 14px;"><?= intval($qtd_automoveis_premium); ?></span>
+                        <span class="badge badge-light" style="font-size: 14px;"><?= $limiteAnunciosPremium['automoveis']; ?></span>
                     </li>
                 </ul>
             </div>

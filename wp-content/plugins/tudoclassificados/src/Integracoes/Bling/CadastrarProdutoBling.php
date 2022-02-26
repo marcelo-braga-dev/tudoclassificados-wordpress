@@ -2,20 +2,23 @@
 
 namespace TudoClassificados\Integracoes\Bling;
 
+use TudoClassificados\Anuncios\Imagens\BaixarImagens;
+use TudoClassificados\Anuncios\Imagens\CadastrarImagem;
 use TudoClassificados\Classificados\DadosAnuncio;
-use TudoClassificados\Classificados\Imagens\SalvarImagens;
 use TudoClassificados\Classificados\Produtos\CadastrarProdutos;
 
 class CadastrarProdutoBling extends CadastrarProdutos
 {
     private $dataExpiracao;
+    private $tipo;
 
-    public function __construct()
+    public function __construct(string $tipo)
     {
         $this->dataExpiracao = date('Y-m-d H:i:s', strtotime('+60 days'));
+        $this->tipo = $tipo;
     }
 
-    public function cadastrar($produtos)
+    public function cadastrar($produtos): array
     {
         $jaCadastrados = 0;
         $qtdCadastrado = 0;
@@ -31,20 +34,18 @@ class CadastrarProdutoBling extends CadastrarProdutos
                 if ($this->idEmpty($produto->id) && !$this->required($infos)) {
                     $qtdCadastrado++;
 
-                    $imagens = new SalvarImagens();
-                    $idImagens = $imagens->salvarImagens($produto->imagem);
+                    $idImagens = $this->imagens($produto->imagem);
 
                     $dados = new DadosAnuncio();
                     $dados->preco = number_format($produto->preco, 2, '.', '');
                     $dados->origem = 'bling';
+                    $dados->tipo = $this->tipo;
                     $dados->produto = $produto;
                     $dados->infos = $infos;
                     $dados->dataExpiracao = $this->dataExpiracao;
                     $dados->idImagens = $idImagens;
 
                     $this->salvaAnuncios($dados);
-
-                    return ['sucesso' => "Foram cadastrados $qtdCadastrado anúncios com sucesso."];
                 }
 
                 $jaCadastrados++;
@@ -52,8 +53,8 @@ class CadastrarProdutoBling extends CadastrarProdutos
 
             }
         }
+        return ['sucesso' => "Foram cadastrados $qtdCadastrado anúncios com sucesso."];
     }
-
 
     private function idEmpty($id)
     {
@@ -62,18 +63,34 @@ class CadastrarProdutoBling extends CadastrarProdutos
         return empty($wpdb->get_results("SELECT meta_id FROM class_postmeta WHERE meta_key = 'id' AND meta_value = '$id'"));
     }
 
-    private function required($args)
+    private function required($args): bool
     {
-        if ($_POST['integrar_marketplace_bling']) {
-            return empty($args['largura']) ||
-                empty($args['altura']) ||
-                empty($args['profundidade']) ||
-                empty($args['peso']);
+        return empty($args['largura']) ||
+            empty($args['altura']) ||
+            empty($args['profundidade']) ||
+            empty($args['peso']);
+    }
+
+    private function imagens($imagens): array
+    {
+        $count_img = 0;
+        $idImagens = [];
+
+        foreach ($imagens as $argImg) {
+            if ($count_img < 12) {
+                $count_img++;
+                $url = wp_strip_all_tags($argImg->link);
+                $titulo = 'img';
+
+                $imagens = new BaixarImagens();
+                $urlImg = $imagens->download($url, $titulo, 'bling');
+
+                $imagem = new CadastrarImagem();
+                $idImagens[] = $imagem->cadastrar($argImg->NomeArquivo, $urlImg);
+            }
         }
 
-        if ($_POST['integrar_filiado_bling']) {
-            return empty($args['link_filiado']);
-        }
+        return $idImagens;
     }
 
     private function descricaoAnuncio($produto)

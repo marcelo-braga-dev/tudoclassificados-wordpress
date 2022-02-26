@@ -4,7 +4,7 @@
             <div class="card-header bg-white">
                 <div class="row justify-content-between align-items-center px-3">
                     <div>
-                        <h3 class="mb-0">Anúncios como Marketplace</h3>
+                        <h3 class="mb-0">Integrar Anúncios para o Classificados de Produtos</h3>
                     </div>
                     <div>
                         <div class="icon icon-shape bg-primary text-white rounded-circle shadow">

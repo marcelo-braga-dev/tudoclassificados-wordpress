@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'TudoClassificados\\Services\\' => array($baseDir . '/Services'),
+    'TudoClassificados\\App\\' => array($baseDir . '/app'),
     'TudoClassificados\\' => array($baseDir . '/src'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-factory/src', $vendorDir . '/psr/http-message/src'),
     'Psr\\Http\\Client\\' => array($vendorDir . '/psr/http-client/src'),

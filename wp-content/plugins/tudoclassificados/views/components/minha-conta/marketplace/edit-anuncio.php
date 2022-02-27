@@ -111,7 +111,7 @@
                                 }
 
                                 if ($can_renew) {
-                                    printf('<a href="%s" class="btn btn-primary"><i class="bi bi-recycle"></i></a>', esc_url(acadp_get_listing_renewal_page_link($post->ID)));
+                                    printf('<a href="%s" class="btn btn-primary"><i class="fas fa-recycle"></i></a>', esc_url(acadp_get_listing_renewal_page_link($post->ID)));
                                 }
                             } else {
                                 if ('pending' == $post->post_status) {

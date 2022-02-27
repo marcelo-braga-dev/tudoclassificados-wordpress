@@ -16,7 +16,7 @@
             <div class="card-body">                
                 <div class="row">
                     <div class="col-12">
-                        <?= do_shortcode("[acadp_manage_listings_classificados]"); ?>
+                        <?= do_shortcode("[tc_card_gerenciar_anuncios chave='classificados']"); ?>
                     </div>
                 </div>
             </div>

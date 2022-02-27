@@ -3,7 +3,8 @@
     "autoload": {
         "psr-4": {
             "TudoClassificados\\": "src/",
-            "TudoClassificados\\Services\\": "Services/"
+            "TudoClassificados\\Services\\": "Services/",
+            "TudoClassificados\\App\\": "app/"
         }
     },
     "require": {

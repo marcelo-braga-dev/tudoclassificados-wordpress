@@ -28,7 +28,7 @@
                         </a>
                     </div>
                     <div class="col-12">
-                        <?= do_shortcode("[acadp_manage_listings_imoveis]"); ?>
+                        <?= do_shortcode("[tc_card_gerenciar_anuncios chave='imoveis']"); ?>
                     </div>
                 </div>
             </div>

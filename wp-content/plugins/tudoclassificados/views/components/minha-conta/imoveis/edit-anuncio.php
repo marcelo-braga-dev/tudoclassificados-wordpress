@@ -1,16 +1,4 @@
 <div class="acadp acadp-user acadp-manage-listings acadp-list-view">
-    <?php if (isset($_GET['submitted']) && 1 == $_GET['submitted']) : ?>
-        <div class="alert alert-info" role="alert">
-            <?php esc_html_e('Thank you for submitting your listing.', 'advanced-classifieds-and-directory-pro'); ?>
-        </div>
-    <?php endif; ?>
-
-    <?php if (isset($_GET['renew']) && 'success' == $_GET['renew']) : ?>
-        <div class="alert alert-info" role="alert">
-            <?php esc_html_e('Thank you for renewing your listing.', 'advanced-classifieds-and-directory-pro'); ?>
-        </div>
-    <?php endif; ?>
-
     <!-- the loop -->
     <?php while ($acadp_query->have_posts()) :
         $acadp_query->the_post();
@@ -19,29 +7,20 @@
         <div class="card mb-3">
             <div class="row p-3">
                 <div class="col-md-3">
-                    <a href="<?php the_permalink(); ?>"><img src="<?php the_acadp_listing_thumbnail($post_meta); ?>"
-                                                             class="rounded"> </a>
+                    <a href="<?php the_permalink(); ?>">
+                        <img src="<?php the_acadp_listing_thumbnail($post_meta); ?>" class="rounded">
+                    </a>
                 </div>
 
                 <div class=" col-md-6">
                     <div class="acadp-listings-title-block">
-                        <h3 class="acadp-no-margin"><a
-                                href="<?php the_permalink(); ?>"><?php echo esc_html(get_the_title()); ?></a></h3>
+                        <h3 class="acadp-no-margin">
+                            <a href="<?php the_permalink(); ?>">
+                                <?= esc_html(get_the_title()); ?>
+                            </a>
+                        </h3>
                         <?php the_acadp_listing_labels($post_meta); ?>
                     </div>
-
-                    <?php if ($post->post_status == 'sem_imagens') : ?>
-                        <div class="row alert alert-danger">
-                            <div class="col-auto align-items-center">
-                                <h4><i class="bi bi-exclamation-diamond" style="font-size: 22px;"></i></h4>
-                            </div>
-                            <div class="col-auto">
-                                <span><b>Anúncio não publicado por falta de imagens.</b></span><br>
-                                <small class="text-white">Insira imagens nesse anúncio, clicando no botão
-                                    editar.</small>
-                            </div>
-                        </div>
-                    <?php endif; ?>
 
                     <small class="text-muted d-block">
                         <?php printf(esc_html__('Posted %s ago', 'advanced-classifieds-and-directory-pro'), human_time_diff(get_the_time('U'), current_time('timestamp'))); ?>
@@ -56,14 +35,6 @@
                             $category_links[] = sprintf('<a href="%s">%s</a>', esc_url(acadp_get_category_page_link($category)), esc_html($category->name));
                         }
                         $info[] = sprintf('<span class="glyphicon glyphicon-briefcase"></span>&nbsp;%s', implode(', ', $category_links));
-                    }
-
-                    if ($has_location && $locations = wp_get_object_terms($post->ID, 'acadp_locations')) {
-                        $location_links = array();
-                        foreach ($locations as $location) {
-                            $location_links[] = sprintf('<a href="%s">%s</a>', esc_url(acadp_get_location_page_link($location)), esc_html($location->name));
-                        }
-                        $info[] = sprintf('<span class="glyphicon glyphicon-map-marker"></span>&nbsp;%s', implode(', ', $location_links));
                     }
 
                     if (!empty($post_meta['views'][0])) {
@@ -111,7 +82,7 @@
                                 }
 
                                 if ($can_renew) {
-                                    printf('<a href="%s" class="btn btn-primary"><i class="bi bi-recycle"></i></a>', esc_url(acadp_get_listing_renewal_page_link($post->ID)));
+                                    printf('<a href="%s" class="btn btn-primary"><i class="fas fa-recycle"></i></a>', esc_url(acadp_get_listing_renewal_page_link($post->ID)));
                                 }
                             } else {
                                 if ('pending' == $post->post_status) {
@@ -124,14 +95,6 @@
 
                                 if ('sem_imagens' == $post->post_status) {
                                     $can_edit = 1;
-                                }
-
-                                if ($can_promote && empty($post_meta['featured'][0]) && 'publish' == $post->post_status) {
-                                    // printf('<a href="%s" class="btn btn-primary btn-sm btn-block">%s</a>', esc_url(acadp_get_listing_promote_page_link($post->ID)), esc_html__('Promote', 'advanced-classifieds-and-directory-pro'));
-                                    if ($post_meta['featured'][0]) {
-                                        echo '<button class="btn btn-success">Promover</button>';
-                                    } else {
-                                    }
                                 }
                             }
                             ?>
@@ -154,7 +117,8 @@
                     </div>
 
                     <hr class="my-3">
-                    <?php //if (bs4t_user_is_premium('imoveis') || bs4t_user_is_premium('geral')) : ?>
+                    <?php //if (bs4t_user_is_premium('imoveis') || bs4t_user_is_premium('geral')) :
+                    ?>
                     <!-- Botao Premium -->
                     <div class="row justify-content-center">
                         <div class="col-auto">
@@ -175,7 +139,8 @@
                     if ($post_meta['featured'][0] && $category->parent == '27') $qtdImovelAtivo++;
                     if ($post_meta['featured'][0] && $category->parent != '27') $qtdGeralAtivo++;
                     ?>
-                    <?// endif; ?>
+                    <? // endif;
+                    ?>
                 </div>
             </div>
         </div>

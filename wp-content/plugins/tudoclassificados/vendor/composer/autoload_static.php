@@ -17,6 +17,7 @@ class ComposerStaticInit122f721363254aa6da8fadcbed42ae45
         'T' => 
         array (
             'TudoClassificados\\Services\\' => 27,
+            'TudoClassificados\\App\\' => 22,
             'TudoClassificados\\' => 18,
         ),
         'P' => 
@@ -51,6 +52,10 @@ class ComposerStaticInit122f721363254aa6da8fadcbed42ae45
         'TudoClassificados\\Services\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Services',
+        ),
+        'TudoClassificados\\App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
         ),
         'TudoClassificados\\' => 
         array (

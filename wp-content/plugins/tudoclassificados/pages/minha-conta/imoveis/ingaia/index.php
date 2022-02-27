@@ -156,18 +156,3 @@
         </div>
     </div>
 </div>
-
-<script>
-    let limite_disponivel_imoveis = <?= $limitesImovel['novos'] ?>;
-</script>
-<?php
-function bs4t_integracao_ingaia()
-{
-    ?>
-    <script src="/wp-content/plugins/tudoclassificados/pages/minha-conta/imoveis/ingaia/principal.js"></script>
-    <?php
-}
-
-add_action('wp_footer', 'bs4t_integracao_ingaia', 102);
-?>
-

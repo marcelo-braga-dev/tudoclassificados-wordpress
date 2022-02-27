@@ -50,11 +50,6 @@ class ACADP_Public_User
         add_shortcode("acadp_listing_form", array($this, "run_shortcode_listing_form"));
         add_shortcode("acadp_manage_listings", array($this, "run_shortcode_manage_listings"));
         add_shortcode("acadp_favourite_listings", array($this, "run_shortcode_favourite_listings"));
-
-        add_shortcode("acadp_manage_listings_filiado", array($this, "run_shortcode_manage_listings_afiliado"));
-        add_shortcode("acadp_manage_listings_marketplace", array($this, "run_shortcode_manage_listings_marketplace"));
-        add_shortcode("acadp_manage_listings_imoveis", array($this, "run_shortcode_manage_listings_imoveis"));
-        add_shortcode("acadp_manage_listings_classificados", array($this, "run_shortcode_manage_listings_classificados"));
     }
 
     /**
@@ -240,61 +235,6 @@ class ACADP_Public_User
         }
 
         wp_die();
-    }
-
-    /**
-     * Process the shortcode [acadp_manage_listings_marketplace].
-     *
-     * @since 1.0.0
-     */
-    public function run_shortcode_manage_listings_marketplace()
-    {
-        $service = new Marketplace();
-        return $service->executar();
-    }
-
-    /**
-     * Process the shortcode [acadp_manage_listings_filiado].
-     *
-     * @since 1.0.0
-     */
-    public function run_shortcode_manage_listings_afiliado()
-    {
-        $service = new Afiliado();
-        return $service->executar();
-    }
-
-    /**
-     * Process the shortcode [acadp_manage_listings_imoveis].
-     *
-     * @since 1.0.0
-     */
-    public function run_shortcode_manage_listings_imoveis()
-    {
-        $service = new Imoveis();
-        return $service->executar();
-    }
-
-    /**
-     * Process the shortcode [acadp_manage_listings_marketplace].
-     *
-     * @since 1.0.0
-     */
-    public function run_shortcode_manage_listings_classificados()
-    {
-        $service = new Classificados();
-        return $service->executar();
-    }
-
-    /**
-     * Process the shortcode [acadp_manage_listings].
-     *
-     * @since 1.0.0
-     */
-    public function run_shortcode_manage_listings()
-    {
-        $service = new Padrao();
-        return $service->execute();
     }
 
     /**

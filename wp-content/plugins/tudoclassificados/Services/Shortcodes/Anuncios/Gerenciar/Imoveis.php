@@ -27,9 +27,7 @@ class Imoveis
         $can_renew = empty($general_settings['has_listing_renewal']) ? false : true;
         $has_location = empty($general_settings['has_location']) ? false : true;
 
-        $span = 9;
-        if ($can_show_images) $span = 7;
-        $span_middle = 'col-md-' . $span;
+
 
         $can_promote = false;
         if (!empty($featured_listing_settings['enabled']) && $featured_listing_settings['price'] > 0) {
@@ -37,13 +35,7 @@ class Imoveis
         }
         $can_promote = apply_filters('acadp_can_promote', $can_promote);
 
-        // Enqueue style dependencies
-        wp_enqueue_style(ACADP_PLUGIN_NAME);
 
-        // Enqueue script dependencies
-        if (wp_script_is(ACADP_PLUGIN_NAME . '-bootstrap', 'registered')) {
-            wp_enqueue_script(ACADP_PLUGIN_NAME . '-bootstrap');
-        }
 
         wp_enqueue_script(ACADP_PLUGIN_NAME . '-validator');
 
@@ -70,7 +62,7 @@ class Imoveis
         // Process output
         ob_start();
         include TUDOCLASSIFICADOS_PATH . 'views/components/minha-conta/imoveis/edit-anuncio.php';
-        wp_reset_postdata(); // Use reset postdata to restore orginal query
+        wp_reset_postdata();
         return ob_get_clean();
     }
 }

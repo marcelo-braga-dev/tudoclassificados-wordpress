@@ -30,7 +30,6 @@ class AnuncioUnico
                 $anuncio = new AnuncioUnicoImoveis();
                 return $anuncio->execute($post, $content);
             }
-
         }
 
         return $content;

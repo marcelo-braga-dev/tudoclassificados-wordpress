@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="row justify-content-around">
-                    <?php icones_anuncio($post_meta) ?>
+                    <?php icones_anuncio_imoveis($post_meta) ?>
                 </div>
             </div>
         </div>

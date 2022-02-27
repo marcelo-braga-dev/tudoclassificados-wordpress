@@ -40,7 +40,6 @@ do_action( 'customify/site-end/after' );
 </div><!-- #page -->
 
 <?php
-require_once ABSPATH . 'wp-content/plugins/tudoclassificados/config/footer.php';
 wp_footer();
 ?>
 

@@ -7,7 +7,7 @@ use TudoClassificados\Anuncios\DadosAnuncio;
 
 class CadastrarAnuncioMarketplace
 {
-    protected function store(DadosAnuncio $dados)
+    protected function store(DadosAnuncio $dados, $terms)
     {
         $user = wp_get_current_user();
         $userId = get_current_user_id();
@@ -50,6 +50,6 @@ class CadastrarAnuncioMarketplace
         );
 
         $post_id = wp_insert_post($anuncio_imovel);
-        wp_set_object_terms($post_id, intval($dados->infos['categoria']), 'acadp_categories');
+        wp_set_object_terms($post_id, $terms, 'acadp_categories');
     }
 }

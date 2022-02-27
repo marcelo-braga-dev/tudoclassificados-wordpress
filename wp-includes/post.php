@@ -4048,6 +4048,7 @@ function wp_insert_post( $postarr, $wp_error = false, $fire_after_hooks = true )
 	$user_id = get_current_user_id();
 
 	$defaults = array(
+	    'tipo' => 'padrao',
 		'post_author'           => $user_id,
 		'post_content'          => '',
 		'post_content_filtered' => '',

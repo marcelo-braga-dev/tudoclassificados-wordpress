@@ -42,11 +42,11 @@ class CadastrarAnuncioImoveis
                 'listing_status' => 'post_status',
                 'expiry_date' => $dados->dataExpiracao,
                 '505' => $dados->caracteristicas,
-                '506' => wp_strip_all_tags($dados->infos->QtdDormitorios), //c1
+                '506' => wp_strip_all_tags($dados->infos->QtdDormitorios),
                 '508' => wp_strip_all_tags($dados->infos->QtdBanheiros),
                 '509' => wp_strip_all_tags($dados->infos->QtdVagas),
                 '512' => wp_strip_all_tags($dados->infos->QtdSuites),
-                '510' => wp_strip_all_tags($dados->infos->AreaUtil), //c5
+                '510' => wp_strip_all_tags($dados->infos->AreaUtil),
                 '511' => wp_strip_all_tags($dados->infos->AreaTotal)
             ),
         );
@@ -59,7 +59,7 @@ class CadastrarAnuncioImoveis
         if ($dados->infos->TipoImovel[0] == 'Prédio') $idCategoria = '';
         if ($dados->infos->TipoImovel[0] == 'Sala') $idCategoria = 165;
 
-        $post_id = wp_insert_post($anuncio_imovel); // IMPORTANTE
-        wp_set_object_terms($post_id, intval($idCategoria), 'acadp_categories'); // IMPORTANTE
+        $post_id = wp_insert_post($anuncio_imovel);
+        wp_set_object_terms($post_id, intval($idCategoria), 'acadp_categories');
     }
 }

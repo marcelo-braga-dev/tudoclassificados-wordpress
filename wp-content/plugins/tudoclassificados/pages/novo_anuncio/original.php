@@ -63,7 +63,6 @@
                         </div>
                   </div>
             <?php endif; ?>
-            <?php include ABSPATH . 'wp-content/plugins/tudoclassificados/assets/js/currency.php'; ?>
 
             <!-- Listing details -->
             <div class="panel panel-default">

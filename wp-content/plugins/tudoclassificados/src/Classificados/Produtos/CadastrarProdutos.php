@@ -49,6 +49,6 @@ class CadastrarProdutos
         );
 
         $post_id = wp_insert_post($anuncio_imovel);
-        wp_set_object_terms($post_id, intval($dados->infos['categoria']), 'acadp_categories');
+        wp_set_object_terms($post_id, $dados->tipo, 'acadp_categories');
     }
 }

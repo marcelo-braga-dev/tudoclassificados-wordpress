@@ -230,7 +230,7 @@ function the_acadp_listing_thumbnail($post_meta)
 	}
 
 	if (!$image) {
-		$image = apply_filters('acadp_no_image_file_path', TUDOCLASSIFICADOS_PLUGIN_URL. 'imagens/sem-foto.jpg');
+		$image = apply_filters('acadp_no_image_file_path', TUDOCLASSIFICADOS_URL_PLUGIN. 'imagens/sem-foto.jpg');
 	}
 
 	echo $image;

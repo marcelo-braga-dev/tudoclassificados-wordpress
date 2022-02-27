@@ -26,7 +26,7 @@
                 <div class=" col-md-6">
                     <div class="acadp-listings-title-block">
                         <h3 class="acadp-no-margin"><a
-                                href="<?php the_permalink(); ?>"><?php echo esc_html(get_the_title()); ?></a></h3>
+                                    href="<?php the_permalink(); ?>"><?php echo esc_html(get_the_title()); ?></a></h3>
                         <?php the_acadp_listing_labels($post_meta); ?>
                     </div>
 
@@ -154,7 +154,8 @@
                     </div>
 
                     <hr class="my-3">
-                    <?php //if (bs4t_user_is_premium('imoveis') || bs4t_user_is_premium('geral')) : ?>
+                    <?php //if (bs4t_user_is_premium('imoveis') || bs4t_user_is_premium('geral')) :
+                    ?>
                     <!-- Botao Premium -->
                     <div class="row justify-content-center">
                         <div class="col-auto">
@@ -175,7 +176,8 @@
                     if ($post_meta['featured'][0] && $category->parent == '27') $qtdImovelAtivo++;
                     if ($post_meta['featured'][0] && $category->parent != '27') $qtdGeralAtivo++;
                     ?>
-                    <?// endif; ?>
+                    <? // endif;
+                    ?>
                 </div>
             </div>
         </div>

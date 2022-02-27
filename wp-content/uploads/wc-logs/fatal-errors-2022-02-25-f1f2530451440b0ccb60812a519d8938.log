@@ -6,3 +6,182 @@ Stack trace:
 #3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
 #4 C:\Users\marce\CodigosFonte\TudoClassi, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\Services\Pages\MinhaConta\Integracoes\bling.php, na linha 9
 
+2022-02-25T15:26:56+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Service\ClassificadosService' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\Services\Pages\MinhaConta\index.php:19
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\minha_conta.php(3): require_once()
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97) : eval()'d code(3): include('C:\\Users\\marce\\...')
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\insert-php-code-snippet\shortcode-handler.php(97): eval()
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): xyz_ips_display_content(Array, '', 'xyz-ips')
+#4 [internal function]: do_shortcode_tag(Array)
+#5 C:\Users\marce\CodigosFonte\TudoClassificados\tudo, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\Services\Pages\MinhaConta\index.php, na linha 19
+
+2022-02-25T15:58:06+00:00 CRITICAL syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF), em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\pages\minha-conta\afiliado\bling\index.php, na linha 181
+
+2022-02-25T18:51:13+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:202
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_listin, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 202
+
+2022-02-25T18:51:51+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:202
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_listin, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 202
+
+2022-02-25T18:53:08+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:202
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_listin, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 202
+
+2022-02-25T18:54:22+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Services\Shortcodes\Anuncios\FormulariosCadastro\FormPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:202
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[aca, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 202
+
+2022-02-25T18:54:54+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:202
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_listin, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 202
+
+2022-02-25T18:55:10+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:202
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_listin, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 202
+
+2022-02-25T18:56:04+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:201
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_listin, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 201
+
+2022-02-25T18:56:14+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:201
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_listin, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 201
+
+2022-02-25T18:56:35+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:201
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_listin, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 201
+
+2022-02-25T18:58:24+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormularioPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:202
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 202
+
+2022-02-25T19:02:20+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormularioPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:202
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 202
+
+2022-02-25T19:02:37+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormularioPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:202
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 202
+
+2022-02-25T19:02:43+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormularioPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:202
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 202
+
+2022-02-25T19:03:17+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\CustomFields\FieldsPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:201
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 201
+
+2022-02-25T19:04:01+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\AnunciosUsuario' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:201
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_listing_...', Array)
+, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 201
+
+2022-02-25T19:04:16+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\AnunciosUsuario' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:201
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_listing_...', Array)
+, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 201
+
+2022-02-25T19:05:59+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormularioPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:201
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 201
+
+2022-02-25T19:07:22+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:201
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_listin, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 201
+
+2022-02-25T19:08:40+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Services\Shortcodes\Anuncios\FormulariosCadastro\FormPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:201
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_listin, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 201
+
+2022-02-25T19:09:59+00:00 CRITICAL Uncaught Error: Class 'TudoClassificados\Service\Shortcodes\Anuncios\FormulariosCadastro\FormPadrao' not found in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php:202
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(356): ACADP_Public_User->run_shortcode_listing_form('', '', 'acadp_listing_f...')
+#1 [internal function]: do_shortcode_tag(Array)
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\shortcodes.php(228): preg_replace_callback('/\\[(\\[?)(acadp_...', 'do_shortcode_ta...', '[acadp_listing_...')
+#3 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\class-wp-hook.php(307): do_shortcode('[acadp_listing_...')
+#4 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-includes\plugin.php(189): WP_Hook->apply_filters('[acadp_listing, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\advanced-classifieds-and-directory-pro\public\class-acadp-public-user.php, na linha 202
+
+2022-02-25T22:14:11+00:00 CRITICAL Uncaught Error: Call to undefined function TudoClassificados\Integracoes\Ingaia\preencheImg() in C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\src\Integracoes\Ingaia\CadastrarImoveisIngaia.php:24
+Stack trace:
+#0 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\src\Integracoes\Ingaia\Ingaia.php(17): TudoClassificados\Integracoes\Ingaia\CadastrarImoveisIngaia->execute(Object(SimpleXMLElement))
+#1 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\Services\Pages\MinhaConta\Imoveis\ImoveisService.php(25): TudoClassificados\Integracoes\Ingaia\Ingaia->cadastrar(Object(SimpleXMLElement))
+#2 C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\Services\Pages\MinhaConta\Imoveis\ImoveisService.php(19): TudoClassificados\Services\Pages\MinhaConta\Imoveis\ImoveisService->cadastrar, em C:\Users\marce\CodigosFonte\TudoClassificados\tudoclassificados-wordpress\wp-content\plugins\tudoclassificados\src\Integracoes\Ingaia\CadastrarImoveisIngaia.php, na linha 24
+

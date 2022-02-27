@@ -17,9 +17,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10.0, user-scalable=yes">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
-    <?php
-    require_once ABSPATH . 'wp-content/plugins/tudoclassificados/config/header.php';
-    ?>
 </head>
 
 <body <?php body_class(); ?>>

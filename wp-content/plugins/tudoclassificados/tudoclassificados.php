@@ -29,6 +29,5 @@ require_once 'Helpers/anuncios-premium.php';
 
 require_once 'includes/shortcodes/class.php';
 
-
 require_once 'assets/footer.php';
 require_once 'assets/header.php';

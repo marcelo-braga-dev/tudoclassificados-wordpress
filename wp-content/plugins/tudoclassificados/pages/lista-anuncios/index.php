@@ -62,7 +62,7 @@ while ($acadp_query->have_posts()) :
                     <small><?= $post_meta['cidade'][0] . ' - ' . $post_meta['estado'][0]  ?></small>
                 <?php endif; ?>
                 <div class="row mt-1">
-                    <?php icones_anuncio($post_meta) ?>
+                    <?php icones_anuncio_imoveis($post_meta) ?>
                 </div>
 
             </div>

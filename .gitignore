@@ -1,4 +1,5 @@
 .DS_Store
 wp-config.php
 .user.ini
-wp-content/uploads/wc-logs/
+/wp-content/uploads/wc-logs/
+/wp-content/uploads/

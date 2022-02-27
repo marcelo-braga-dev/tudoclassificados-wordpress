@@ -1,4 +1,6 @@
 .DS_Store
 wp-config.php
 .user.ini
-/wp-content/uploads/
+
+wp-content/uploads/
+wp-content/themes/

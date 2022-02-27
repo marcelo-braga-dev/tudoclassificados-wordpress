@@ -324,7 +324,7 @@ class ACADP {
 		
 		// Hooks specific to the listing detail page
 		$plugin_public_listing = new ACADP_Public_Listing();
-		
+
 		$this->loader->add_action( 'the_content', $plugin_public_listing, 'the_content', 20 );
 		$this->loader->add_action( 'wp_ajax_acadp_public_add_remove_favorites', $plugin_public_listing, 'ajax_callback_add_remove_favorites' );
 		$this->loader->add_action( 'wp_ajax_nopriv_acadp_public_add_remove_favorites', $plugin_public_listing, 'ajax_callback_add_remove_favorites' );

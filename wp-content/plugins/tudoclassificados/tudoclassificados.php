@@ -26,7 +26,8 @@ define('TUDOCLASSIFICADOS_URL_ASSETS', plugin_dir_url( __FILE__ ) . 'assets/');
 require_once 'vendor/autoload.php';
 require_once 'Helpers/geral.php';
 require_once 'Helpers/anuncios-premium.php';
-require_once 'includes/class.php';
+
+require_once 'includes/shortcodes/class.php';
 
 
 require_once 'assets/footer.php';

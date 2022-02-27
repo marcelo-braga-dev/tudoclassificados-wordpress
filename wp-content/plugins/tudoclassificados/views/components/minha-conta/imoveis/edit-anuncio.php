@@ -140,13 +140,13 @@
                             <?php if ($can_edit) : ?>
                                 <a href="<?php echo esc_url(acadp_get_listing_edit_page_link($post->ID)); ?>"
                                    class="btn btn-success">
-                                    <i class="bi bi-pencil-fill"></i>
+                                    <i class="fas fa-pencil"></i>
                                 </a>
                             <?php endif; ?>
                             <a href="<?php echo esc_url(acadp_get_listing_delete_page_link($post->ID)); ?>"
                                class="btn btn-danger"
                                onclick="return confirm( '<?php esc_attr_e('Are you sure you want to delete this listing?', 'advanced-classifieds-and-directory-pro'); ?>' );">
-                                <i class="bi bi-trash-fill"></i>
+                                <i class="fas fa-trash"></i>
                             </a>
                         </div>
                         <div class="col-12">

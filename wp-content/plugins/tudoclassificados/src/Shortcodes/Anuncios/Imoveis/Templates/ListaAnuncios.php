@@ -1,6 +1,9 @@
 <?php
+namespace TudoClassificados\Shortcodes\Anuncios\Imoveis\Templates;
 
-class ListaAnunciosClassificados
+use WP_Query;
+
+class ListaAnuncios
 {
     public function __construct()
     {

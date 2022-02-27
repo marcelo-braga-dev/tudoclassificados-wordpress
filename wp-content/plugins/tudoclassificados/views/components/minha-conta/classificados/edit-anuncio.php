@@ -1,16 +1,4 @@
 <div class="acadp acadp-user acadp-manage-listings acadp-list-view">
-    <?php if (isset($_GET['submitted']) && 1 == $_GET['submitted']) : ?>
-        <div class="alert alert-info" role="alert">
-            <?php esc_html_e('Thank you for submitting your listing.', 'advanced-classifieds-and-directory-pro'); ?>
-        </div>
-    <?php endif; ?>
-
-    <?php if (isset($_GET['renew']) && 'success' == $_GET['renew']) : ?>
-        <div class="alert alert-info" role="alert">
-            <?php esc_html_e('Thank you for renewing your listing.', 'advanced-classifieds-and-directory-pro'); ?>
-        </div>
-    <?php endif; ?>
-
     <!-- the loop -->
     <?php while ($acadp_query->have_posts()) :
         $acadp_query->the_post();
@@ -19,8 +7,9 @@
         <div class="card mb-3">
             <div class="row p-3">
                 <div class="col-md-3">
-                    <a href="<?php the_permalink(); ?>"><img src="<?php the_acadp_listing_thumbnail($post_meta); ?>"
-                                                             class="rounded"> </a>
+                    <a href="<?php the_permalink(); ?>">
+                        <img src="<?php the_acadp_listing_thumbnail($post_meta); ?>" class="rounded">
+                    </a>
                 </div>
 
                 <div class=" col-md-6">
@@ -111,7 +100,7 @@
                                 }
 
                                 if ($can_renew) {
-                                    printf('<a href="%s" class="btn btn-primary"><i class="bi bi-recycle"></i></a>', esc_url(acadp_get_listing_renewal_page_link($post->ID)));
+                                    printf('<a href="%s" class="btn btn-primary"><i class="fas fa-recycle"></i></a>', esc_url(acadp_get_listing_renewal_page_link($post->ID)));
                                 }
                             } else {
                                 if ('pending' == $post->post_status) {
@@ -136,17 +125,16 @@
                             }
                             ?>
 
-
                             <?php if ($can_edit) : ?>
                                 <a href="<?php echo esc_url(acadp_get_listing_edit_page_link($post->ID)); ?>"
                                    class="btn btn-success">
-                                    <i class="bi bi-pencil-fill"></i>
+                                    <i class="fas fa-pencil"></i>
                                 </a>
                             <?php endif; ?>
                             <a href="<?php echo esc_url(acadp_get_listing_delete_page_link($post->ID)); ?>"
                                class="btn btn-danger"
                                onclick="return confirm( '<?php esc_attr_e('Are you sure you want to delete this listing?', 'advanced-classifieds-and-directory-pro'); ?>' );">
-                                <i class="bi bi-trash-fill"></i>
+                                <i class="fas fa-trash"></i>
                             </a>
                         </div>
                         <div class="col-12">
@@ -172,12 +160,6 @@
                             </div>
                         </div>
                     </div>
-                    <?php
-                    if ($post_meta['featured'][0] && $category->parent == '27') $qtdImovelAtivo++;
-                    if ($post_meta['featured'][0] && $category->parent != '27') $qtdGeralAtivo++;
-                    ?>
-                    <? // endif;
-                    ?>
                 </div>
             </div>
         </div>
@@ -186,5 +168,3 @@
     <!-- pagination here -->
     <?php the_acadp_pagination($acadp_query->max_num_pages, "", $paged); ?>
 </div>
-<input type="hidden" id="qtd-imovel-ativo" value="<?= $qtdImovelAtivo ?>">
-<input type="hidden" id="qtd-geral-ativo" value="<?= $qtdGeralAtivo ?>">

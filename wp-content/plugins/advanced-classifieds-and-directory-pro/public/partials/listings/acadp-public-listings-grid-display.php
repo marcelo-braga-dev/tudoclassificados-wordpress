@@ -8,6 +8,6 @@
  *
  * @package Advanced_Classifieds_And_Directory_Pro
  */
-echo __FILE__;exit();
+
 //include ABSPATH . 'wp-content/plugins/tudoclassificados/widgets/carrocel_anuncios.php';
 

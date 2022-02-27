@@ -1456,7 +1456,7 @@ msgid ""
 "Menu Items\" view."
 msgstr ""
 "Insira o número máximo de subníveis de categoria para mostrar no \"Somente texto "
-"Itens do menu\" visualizar ".
+"Itens do menu\" visualizar ."
 
 #: admin/class-acadp-admin-settings.php:850
 msgid "Order categories by"
